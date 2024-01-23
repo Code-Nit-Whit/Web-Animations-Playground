@@ -1,0 +1,18 @@
+Handling images with text or edges with multiple olors for bitmap tracing In Inkspace.
+
+
+Filters: Repeat these until edges only contain 1 color (well... two contrasted colors)
+------------------
+Colorblindness
+Blend (not the simple one)
+GReyscales
+Contrast, high as itll go
+(Saturation)?
+
+
+Bitmap Tracing:
+---------------
+For crips edges, do above, then recolor after. Just copy image
+Use multicolor greys, fewest scans, only Smooth corners (high) and optiimize (low). 
+
+For color. Run the multicolor w/ as few scans as possible without missing portions. Match fill and combine any that mesh together. REcolor gryscaled crisp edges and mix with solid color pieces for a cleaner, smoother, nicer trace w/ minimal effort!!
