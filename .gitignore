@@ -2,5 +2,12 @@
 
 !LICENSE
 !README.md
+
 !V1_Keypad-Only
 !V1_Keypad-Only/**/*
+!Assets
+!Assets/Brand-Icons
+!Assets/Brand-Icons/**
+
+!index.html
+!styles.css
