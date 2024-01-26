@@ -19,4 +19,38 @@
        style="fill:#ffd600;fill-opacity:1;stroke:#09054d;stroke-width:0;stroke-miterlimit:3.8;stroke-opacity:0.993846"
        d="M 22.967855,4.6770173 A 21.903612,21.903612 0 0 0 1.0641443,26.580727 21.903612,21.903612 0 0 0 22.967855,48.484244 21.903612,21.903612 0 0 0 44.871371,26.580727 21.903612,21.903612 0 0 0 22.967855,4.6770173 Z M 21.607894,23.806508 h 3.674609 v 12.175196 c 0,3.692831 -2.153236,5.373243 -5.297461,5.373243 -2.841048,0 -4.891676,-1.914981 -5.727343,-3.693945 l 2.887304,-1.758205 c 0.557847,0.993676 1.405871,1.758205 2.625196,1.758205 1.166405,0 1.837695,-0.458372 1.837695,-2.240626 z m 11.531836,0.0012 c 2.263357,0 3.889479,0.779882 5.0625,2.822071 l -2.771484,1.7625 c -0.609664,-1.083611 -1.269033,-1.510352 -2.291016,-1.510352 -1.04293,0 -1.70332,0.654868 -1.70332,1.510352 0,1.057288 0.661564,1.485071 2.188476,2.139843 l 0.889649,0.377149 c 3.026262,1.282125 4.732812,2.591812 4.732812,5.535547 0,3.171865 -2.51809,4.910157 -5.898242,4.910157 -3.306287,0 -5.183771,-1.650659 -6.228906,-3.693945 l 2.798242,-1.848048 c 0.762904,1.232771 1.591823,2.414063 3.348047,2.414063 1.475096,0 2.249023,-0.729252 2.249023,-1.738282 0,-1.207546 -0.800416,-1.636423 -2.423242,-2.339453 l -0.889648,-0.377539 c -2.567637,-1.08361 -4.275391,-2.441316 -4.275391,-5.309375 0,-2.643222 2.034099,-4.654688 5.2125,-4.654688 z" />
   </g>
+  <metadata id="metadata-jscw">
+                  <rdf:RDF>
+                    <cc:Work rdf:about="">
+                      <dc:title>JavaScript Icon- Circle</dc:title>
+                      <dc:date>1/24/2024</dc:date>
+                      <dc:creator>
+                        <cc:Agent>
+                          <dc:title>Code-Nit-Whit (C. Whitaker)</dc:title>
+                        </cc:Agent>
+                      </dc:creator>
+                      <dc:rights>
+                        <cc:Agent>
+                          <dc:title>C. Whitaker</dc:title>
+                        </cc:Agent>
+                      </dc:rights>
+                      <dc:identifier>https://github.com/Code-Nit-Whit/Animated-SVG/Assets/Brand-Icons/javascript-icon.svg</dc:identifier>
+                      <dc:source>https://github.com/Code-Nit-Whit</dc:source>
+                      <dc:subject>
+                        <rdf:Bag>
+                          <rdf:li>JavaScript</rdf:li>
+                        </rdf:Bag>
+                      </dc:subject>
+                      <dc:description>A simple JavaScript icon. Circular.</dc:description>
+                      <cc:license rdf:resource="http://creativecommons.org/licenses/by/4.0/" />
+                    </cc:Work>
+                    <cc:License rdf:about="http://creativecommons.org/licenses/by/4.0/">
+                      <cc:permits rdf:resource="http://creativecommons.org/ns#Reproduction" />
+                      <cc:permits rdf:resource="http://creativecommons.org/ns#Distribution" />
+                      <cc:requires rdf:resource="http://creativecommons.org/ns#Notice" />
+                      <cc:requires rdf:resource="http://creativecommons.org/ns#Attribution" />
+                      <cc:permits rdf:resource="http://creativecommons.org/ns#DerivativeWorks" />
+                    </cc:License>
+                  </rdf:RDF>
+                </metadata>
 </svg>

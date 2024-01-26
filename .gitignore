@@ -5,10 +5,12 @@
 
 !V1_Keypad-Only
 !V1_Keypad-Only/**/*
+
 !Assets
 !Assets/Brand-Icons
 !Assets/Brand-Icons/**
+!Assets/blue-www.svg
 
 !index.html
 !styles.css
-!inddex.js
+!index.js
