@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Animated SVG- Keypad Only</title>
+    <style>
+      body {
+        margin: 0;
+        padding: 0;
+        text-align: center; 
+      }
+
+      .svg-container {
+        display: flex;
+        flex-direction: column;
+        align-items:center;
+        margin-top: 100px; 
+      }
+
+      .view-cotainer {
+        background-color: #eee;
+        margin-bottom: 50px;
+        box-sizing: border-box; 
+    }
+
+      #desktop-view {
+            width: 1280px; 
+            height: 598px; 
+           /* aspect-ratio: 3/2;*/
+        }
+
+        #tablet-view {
+            height: 4.7in;
+            width: 7.5in; 
+            /*aspect-ratio: 15/9;*/
+        }
+
+        #phone-view {
+            width: 360px; 
+            height: 740px; 
+            /*aspect-ratio: 18.5/9;*/
+        }
+
+        #phone-view-rotated {
+            width: 740px; 
+            height: 360px;
+            /*aspect-ratio:3/2;*/
+        }
+
+        img {
+            box-sizing: border-box;
+        }
+    </style>
+  </head>
+  <body>
+    <h1>Static SVG- Keypad Only at Different Screen Sizes</h1>
+    <p>This page is intended to be viewed on a desktop browser for testing purposes.</p>
+    <div class="svg-container">
+        <h2>Desktop Browser</h2>
+        <div id="desktop-view" class="view-cotainer">
+            <img
+                id="dynamic-svg"
+                src="./V1_Keypad-Only/Ctrl+Alt+Del-Animated-Keypad-Only.svg"
+                alt="SVG 0.1"
+            />
+        </div>
+        <h2>Tablet Browser- Landscape</h2>
+        <div id="tablet-view" class="view-cotainer">
+            <img
+                src="./V1_Keypad-Only/Ctrl+Alt+Del-Animated-Keypad-Only.svg"
+                alt="SVG 1"
+            />
+        </div>
+        <h2>Smartphone Browser</h2>
+        <div id="phone-view" class="view-cotainer">
+            <img
+                src="./V1_Keypad-Only/Ctrl+Alt+Del-Animated-Keypad-Only.svg"
+                alt="SVG 2"
+            />
+        </div>
+        
+        <h2>Smartphone Browser- Rotated</h2>
+        <div id="phone-view-rotated" class="view-cotainer">
+            <img
+                src="./V1_Keypad-Only/Ctrl+Alt+Del-Animated-Keypad-Only.svg"
+                alt="SVG 3"
+            />
+        </div>
+    </div>
+    <script>
+        const viewContainers = document.querySelectorAll('.svg-container div');
+        viewContainers.forEach(container => {
+        const imgElement = container.querySelector('img');
+        const containerWidth = container.offsetWidth;
+        const containerHeight = container.offsetHeight;
+        const smallerDimension = Math.min(containerWidth, containerHeight);
+        imgElement.style.maxWidth = `${smallerDimension * 0.80}px`;
+        imgElement.style.maxHeight = `${smallerDimension * 0.80}px`;
+        imgElement.style.marginTop = `${smallerDimension * 0.10}px`;
+        });
+    </script>
+  </body>
+</html>
+

@@ -6,173 +6,23 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Your Awesome Animated SVG Project</title>
   <style>
-    /* Base styles */
-    html,
-    body {
-      margin: 0;
-      padding: 0;
-      font-family: sans-serif;
-      box-sizing: border-box;
-    }
 
-    /* Container - 100% usable screen size */
-    .container {
-      display: flex;
-      flex-direction: column;
-      min-height: 100vh;
-      min-width: 100vw;
-    }
-
-    /* Text section - centered, comfortable padding */
-    .text-section {
-      height: 100vh;
-      width: 100vw;
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      align-items: center;
-      padding: 10px;
-      box-sizing: border-box;
-      /*background-image: url("path/to/your/background.jpg");
-      background-size: cover;
-      background-position: center;*/
-      background-color: #2c2f33;
-    }
-
-    /* Title and description */
-    h1,
-    p {
-      text-align: center;
-      width: 600px;
-      max-width: 80vw;
-      margin: 20px 0;
-    }
-
-    /* SVG section - 100% container size, responsive scaling */
-    .svg-section {
-      height: 110vh;
-      width: 100vw;
-      display: flex;
-      flex-direction: column;
-      justify-content: space-around;
-      align-items: center;
-      box-sizing: border-box;
-      background-color: #99aab5;
-    }
-
-    /* SVG styling */
-    img {
-      box-sizing: border-box;
-      max-width: 80vw;
-      max-height: 80vh;
-    }
-
-    .select-section {
-      /* General layout */
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      width: fit-content;
-      background-color: grey;
-      border: 1px solid none;
-      border-radius: 5px;
-      padding: none;
-      cursor: pointer;
-      user-select: none;
-    }
-
-    /* Label styling */
-    .select-section label {
-      color: #fff;
-      font-family: sans-serif;
-      font-size: 14px;
-      padding: 11px 10px;
-    }
-
-    /* Select element styling */
-    .select-section select {
-      background-color: #36393f;
-      border: 1px solid #4f545c;
-      color: #fff;
-      border: none;
-      border-radius: 0px 5px 5px 0;
-      outline: none;
-      font-family: inherit;
-      font-size: inherit;
-      appearance: none;
-      /* Remove default browser styling */
-      cursor: pointer;
-      padding: 8px 10px;
-      margin-right: 1px;
-    }
-
-    .select-section select::-moz-progress-bar {
-      border-radius: 0 5px 5px 0;
-    }
-
-    /* Arrow icon styling */
-    .select-section select::after {
-      content: "";
-      width: 0;
-      height: 0;
-      border-top: 5px solid transparent;
-      border-bottom: 5px solid transparent;
-      border-left: 5px solid #fff;
-      margin-left: 5px;
-      transform: translateY(-2px);
-    }
-
-    /* Hover state */
-    .select-section select:hover {
-      background-color: #2f3136;
-    }
-
-    .icon-top {
-      width: 100%;
-      max-height: 85%;
-      margin: 0;
-      margin-bottom: 5px;
-    }
-
-    .icon-link {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-    }
-
-    a {
-      text-decoration: none;
-    }
-
-    .icon-row {
-      display: flex;
-      flex-direction: row;
-      justify-content: space-around;
-      height: 20%;
-      width: 80%;
-      margin: 40px 0;
-    }
-
-    #anime-icon {
-      stroke: black;
-      fill: black;
-      width: 150px;
-      margin-top: 5px;
-    }
-
-    .icon-label {
-      color: black;
-      text-decoration: none;
-      font-weight: bolder;
-      margin-bottom: 5px;
-    }
   </style>
+  <link rel="stylesheet" href="./styles.css">
+
 </head>
 
 <body>
   <div class="container">
     <div class="text-section">
-      <h1>Animated SVG: Ctrl + Alt + Delinquents</h1>
+      <div class="header">
+        <a target="_blank" href="https://icons8.com/icon/7SAxJYuGvaKn/icons8">Icons8</a> icon by <a target="_blank"
+          href="https://icons8.com">Icons8</a>
+      </div>
+      <div class="heading">
+        <h2>Animated SVG:</h2>
+        <h1> Ctrl + Alt + Delinquents</h1>
+      </div>
       <p>
         Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
         eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
@@ -182,44 +32,55 @@
         pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
         culpa qui officia deserunt mollit anim id est laborum.
       </p>
+      <div class="powered">
+        <h4>Powered by the Following Platforms and Services:</h4>
+      </div>
       <div class="icon-row">
-        <a href="javascript_link" target="_blank" class="icon-link">
+        <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript" target="_blank" class="icon-link">
           <span class="icon-label">JavaScript</span>
-          <svg id="javascript-icon" class="icon-top icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48" alt="JavaScript Icon">
-            <path fill="#ffd600" d="M6,42V6h36v36H6z" />
-            <path fill="#000001" d="M29.538 32.947c.692 1.124 1.444 2.201 3.037 2.201 1.338 0 2.04-.665 2.04-1.585 0-1.101-.726-1.492-2.198-2.133l-.807-.344c-2.329-.988-3.878-2.226-3.878-4.841 0-2.41 1.845-4.244 4.728-4.244 2.053 0 3.528.711 4.592 2.573l-2.514 1.607c-.553-.988-1.151-1.377-2.078-1.377-.946 0-1.545.597-1.545 1.377 0 .964.6 1.354 1.985 1.951l.807.344C36.452 29.645 38 30.839 38 33.523 38 36.415 35.716 38 32.65 38c-2.999 0-4.702-1.505-5.65-3.368L29.538 32.947zM17.952 33.029c.506.906 1.275 1.603 2.381 1.603 1.058 0 1.667-.418 1.667-2.043V22h3.333v11.101c0 3.367-1.953 4.899-4.805 4.899-2.577 0-4.437-1.746-5.195-3.368L17.952 33.029z" />
+          <svg id="javascript-icon" class="icon-top icon" viewBox="0 0 50 50" xmlns="http://www.w3.org/2000/svg" >
+                <path class="path1" style="fill:#00000e;fill-opacity:1;stroke-width:0;stroke-miterlimit:3.8;stroke-opacity:0.993846" d="M 44.87137,26.580631 A 21.903612,21.903612 0 0 1 22.967758,48.484243 21.903612,21.903612 0 0 1 1.0641453,26.580631 21.903612,21.903612 0 0 1 22.967758,4.6770188 21.903612,21.903612 0 0 1 44.87137,26.580631 Z" />
+                <path class="path2"  style="fill:#ffd600;fill-opacity:1;stroke-width:0;stroke-miterlimit:3.8;stroke-opacity:0.993846" d="M 22.967855,4.6770173 A 21.903612,21.903612 0 0 0 1.0641443,26.580727 21.903612,21.903612 0 0 0 22.967855,48.484244 21.903612,21.903612 0 0 0 44.871371,26.580727 21.903612,21.903612 0 0 0 22.967855,4.6770173 Z M 21.607894,23.806508 h 3.674609 v 12.175196 c 0,3.692831 -2.153236,5.373243 -5.297461,5.373243 -2.841048,0 -4.891676,-1.914981 -5.727343,-3.693945 l 2.887304,-1.758205 c 0.557847,0.993676 1.405871,1.758205 2.625196,1.758205 1.166405,0 1.837695,-0.458372 1.837695,-2.240626 z m 11.531836,0.0012 c 2.263357,0 3.889479,0.779882 5.0625,2.822071 l -2.771484,1.7625 c -0.609664,-1.083611 -1.269033,-1.510352 -2.291016,-1.510352 -1.04293,0 -1.70332,0.654868 -1.70332,1.510352 0,1.057288 0.661564,1.485071 2.188476,2.139843 l 0.889649,0.377149 c 3.026262,1.282125 4.732812,2.591812 4.732812,5.535547 0,3.171865 -2.51809,4.910157 -5.898242,4.910157 -3.306287,0 -5.183771,-1.650659 -6.228906,-3.693945 l 2.798242,-1.848048 c 0.762904,1.232771 1.591823,2.414063 3.348047,2.414063 1.475096,0 2.249023,-0.729252 2.249023,-1.738282 0,-1.207546 -0.800416,-1.636423 -2.423242,-2.339453 l -0.889648,-0.377539 c -2.567637,-1.08361 -4.275391,-2.441316 -4.275391,-5.309375 0,-2.643222 2.034099,-4.654688 5.2125,-4.654688 z" />
           </svg>
         </a>
-        <a href="html5_link" target="_blank" class="icon-link">
+        <a href="https://developer.mozilla.org/en-US/docs/Web/HTML" target="_blank" class="icon-link">
           <span class="icon-label">HTML5</span>
-          <svg id="html-icon" class="icon-top icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48" alt="HTML Icon">
-            <path fill="#E65100" d="M41,5H7l3,34l14,4l14-4L41,5L41,5z" />
-            <path fill="#FF6D00" d="M24 8L24 39.9 35.2 36.7 37.7 8z" />
-            <path fill="#FFF" d="M24,25v-4h8.6l-0.7,11.5L24,35.1v-4.2l4.1-1.4l0.3-4.5H24z M32.9,17l0.3-4H24v4H32.9z" />
-            <path fill="#EEE" d="M24,30.9v4.2l-7.9-2.6L15.7,27h4l0.2,2.5L24,30.9z M19.1,17H24v-4h-9.1l0.7,12H24v-4h-4.6L19.1,17z" />
+          <svg id="html-icon" class="icon-top icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48"
+            alt="HTML Icon">
+            <path class = "path1" fill="#E65100" d="M41,5H7l3,34l14,4l14-4L41,5L41,5z" />
+            <path class="path2" fill="#FF6D00" d="M24 8L24 39.9 35.2 36.7 37.7 8z" />
+            <path class="path3" fill="#FFF" d="M24,25v-4h8.6l-0.7,11.5L24,35.1v-4.2l4.1-1.4l0.3-4.5H24z M32.9,17l0.3-4H24v4H32.9z" />
+            <path class="path4" fill="#EEE" d="M24,30.9v4.2l-7.9-2.6L15.7,27h4l0.2,2.5L24,30.9z M19.1,17H24v-4h-9.1l0.7,12H24v-4h-4.6L19.1,17z" />
           </svg>
         </a>
-        <a href="css3_link" target="_blank" class="icon-link">
+        <a href="https://developer.mozilla.org/en-US/docs/Web/CSS" target="_blank" class="icon-link">
           <span class="icon-label">CSS3</span>
-          <svg id="css-icon" class="icon-top icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48" alt="CSS Icon">
-            <path fill="#0277BD" d="M41,5H7l3,34l14,4l14-4L41,5L41,5z" />
-            <path fill="#039BE5" d="M24 8L24 39.9 35.2 36.7 37.7 8z" />
-            <path fill="#FFF" d="M33.1 13L24 13 24 17 28.9 17 28.6 21 24 21 24 25 28.4 25 28.1 29.5 24 30.9 24 35.1 31.9 32.5 32.6 21 32.6 21z" />
-            <path fill="#EEE" d="M24,13v4h-8.9l-0.3-4H24z M19.4,21l0.2,4H24v-4H19.4z M19.8,27h-4l0.3,5.5l7.9,2.6v-4.2l-4.1-1.4L19.8,27z" />
+          <svg id="css-icon" class="icon-top icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48"
+            alt="CSS Icon">
+            <path class="path1" fill="#0277BD" d="M41,5H7l3,34l14,4l14-4L41,5L41,5z" />
+            <path class="path2" fill="#039BE5" d="M24 8L24 39.9 35.2 36.7 37.7 8z" />
+            <path class="path3" fill="#FFF"
+              d="M33.1 13L24 13 24 17 28.9 17 28.6 21 24 21 24 25 28.4 25 28.1 29.5 24 30.9 24 35.1 31.9 32.5 32.6 21 32.6 21z" />
+            <path class="path4" fill="#EEE"
+              d="M24,13v4h-8.9l-0.3-4H24z M19.4,21l0.2,4H24v-4H19.4z M19.8,27h-4l0.3,5.5l7.9,2.6v-4.2l-4.1-1.4L19.8,27z" />
           </svg>
         </a>
         <a href="https://inkscape.org/" target="_blank" class="icon-link">
           <span class="icon-label">Inkscape</span>
-          <svg id="inkscape-icon" class="icon-top icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48" alt="Inkscape Icon">
-            <path fill="#212121"  d="M44.265 20.931L27.505 3.502c-2.08-2.003-5.498-2.003-7.423 0L3.908 20.327c-6.131 6.227 4.157 5.727 7.813 8.086 1.686 1.116-4.968 2.559-3.52 4.031 1.411 1.481 8.076 2.815 9.487 4.25 1.411 1.472-2.826 3.039-1.406 4.511 1.375 1.472 4.423.07 5.019 3.417.431 2.478 5.779 1.233 8.29-.879 1.567-1.353-2.74-1.352-1.329-2.833 1.265-1.298 2.474-1.875 3.574-2.231 1.97-.649 4.22-.504 5.054-2.662.706-1.792-5.266-3.194-3.654-4.346C37.084 28.92 50.79 27.551 44.265 20.931zM25.717 32.904c-2.126.732-11.867-3.948-9.31-3.948C16.847 28.957 31.261 31.021 25.717 32.904zM38.667 37.98c-1.847 1.904.321 3.899 2.128 2.584C41.278 40.201 40.756 38.433 38.667 37.98zM40.021 36.134c0 .899 6.313 1.412 5.965-.214C45.483 33.181 40.719 33.395 40.021 36.134z" />
-            <path fill="#212121" d="M9.552,41.421c1.477,1.555,3.711-0.34,4.43-2.527C12.545,36.61,7.237,39.04,9.552,41.421z" />
-            <path fill="#424242" d="M26.77,5.59l-4.48,7.59l-7.94,13.46c-1.55-0.59-3.21-0.95-4.76-1.23 c-0.6-0.19-1.21-0.36-1.82-0.52c-1.14-0.31-3.21-0.88-3.74-1.37c0.07-0.21,0.34-0.78,1.35-1.81l7.68-7.98l8.5-8.84 C22.11,4.32,22.89,4,23.77,4s1.74,0.33,2.36,0.92L26.77,5.59z" />
-            <path fill="#fafafa"  d="M33.07,12.13c-0.03,0.1-0.08,0.18-0.13,0.24l-3.05-2.51l-0.6,3.69l-2.51-1.37l-4.09,2.62l-0.4-1.62 l-0.95-3.89l-2.18,4.79l-5.45-0.04c-0.34,0-0.55-0.12-0.65-0.31l8.5-8.84C22.11,4.32,22.89,4,23.77,4s1.74,0.33,2.36,0.92l0.64,0.67 L33.07,12.13z" />
+          <svg id="inkscape-icon" class="icon-top icon" viewBox="0 0 43.99982 43.99212" version="1.1"
+            xmlns="http://www.w3.org/2000/svg" xmlns:svg="http://www.w3.org/2000/svg">
+            <path class="path1"
+              d="M 21.735232,-3.5183716e-8 C 20.380108,-3.5183716e-8 19.04441,0.50064936 18.081911,1.5021484 L 1.9078876,18.327148 c -6.1309939,6.226994 4.1570896,5.727135 7.8130862,8.086133 1.6859982,1.115999 -4.968116,2.558861 -3.5201174,4.030859 1.4109986,1.480999 8.0761106,2.815002 9.4871096,4.25 1.410999,1.471999 -2.826053,3.039135 -1.406055,4.511133 1.374999,1.471999 4.422946,0.07 5.018946,3.416992 0.430999,2.477998 5.779041,1.232897 8.290039,-0.879101 1.566998,-1.352999 -2.740101,-1.35201 -1.329102,-2.833008 1.264999,-1.297999 2.474025,-1.875055 3.574024,-2.231055 1.969998,-0.648999 4.220102,-0.503916 5.054101,-2.661914 0.705999,-1.791998 -5.2661,-3.193899 -3.654102,-4.345898 3.847997,-2.750997 17.554096,-4.120046 11.029102,-10.740039 L 25.504958,1.5021484 C 24.464959,0.50064936 23.090355,-3.5183716e-8 21.735232,-3.5183716e-8 Z M 14.406911,26.95625 c 0.44,10e-4 14.853956,2.064853 9.309961,3.947851 -2.125998,0.732 -11.866958,-3.947851 -9.309961,-3.947851 z m 26.669532,5.016601 c -1.341124,0.0535 -2.70647,0.79183 -3.055469,2.161328 0,0.898999 6.312843,1.411936 5.964844,-0.214062 -0.2515,-1.369499 -1.568252,-2.000766 -2.909375,-1.947266 z m -30.969922,4.006836 c -1.9443932,-0.0066 -4.2185927,1.73026 -2.5546881,3.441602 1.4769989,1.554998 3.7110791,-0.340151 4.4300781,-2.527149 -0.404156,-0.642374 -1.114541,-0.911883 -1.87539,-0.914453 z m 26.560351,5.86e-4 c -1.846998,1.903998 0.320932,3.898983 2.12793,2.583985 0.482999,-0.363 -0.03893,-2.130985 -2.12793,-2.583985 z"
+              style="fill:#212121;fill-opacity:1" />
+            <path class="path2" fill="#424242"
+              d="m 24.76988,3.5901953 -4.48,7.5899997 -7.94,13.46 c -1.55,-0.59 -3.2100002,-0.95 -4.7600002,-1.23 -0.6,-0.19 -1.21,-0.36 -1.82,-0.52 -1.14,-0.31 -3.21,-0.88 -3.74,-1.37 0.07,-0.21 0.34,-0.78 1.35,-1.81 l 7.6800002,-7.98 8.5,-8.8399997 c 0.55,-0.57 1.33,-0.89 2.21,-0.89 0.88,0 1.74,0.33 2.36,0.92 z" />
+            <path class="path3" fill="#fafafa"
+              d="m 31.06988,10.130195 c -0.03,0.1 -0.08,0.18 -0.13,0.24 l -3.05,-2.5099997 -0.6,3.6899997 -2.51,-1.37 -4.09,2.62 -0.4,-1.62 -0.95,-3.8899997 -2.18,4.7899997 -5.45,-0.04 c -0.34,0 -0.55,-0.12 -0.65,-0.31 l 8.5,-8.8399997 c 0.55,-0.57 1.33,-0.89 2.21,-0.89 0.88,0 1.74,0.33 2.36,0.92 l 0.64,0.67 z" />
           </svg>
         </a>
       </div>
       <a href="https://animejs.com/" target="_blank" class="icon-link">
-        <span class="icon-label">Anime.js</span>
+        <span class="special-label">Anime.js</span>
         <img id="anime-icon" class="icon" src="./Assets/Brand-Icons/animejs.svg" alt="Anime.js icon" />
       </a>
     </div>
@@ -239,64 +100,176 @@
   </div>
   <script src="https://cdn.jsdelivr.net/npm/animejs@3.2.1/lib/anime.min.js"></script>
   <script>
-    /* const dropdown = document.querySelector('.wrapper-dropdown-1');
-          const toggle = document.querySelector('.dropdown-toggle');
-          const options = document.querySelector('.dropdown');
 
-          // Add event listener to toggle dropdown
-          toggle.addEventListener('click', () => {
-          options.classList.toggle('hidden');
-          });*/
+
     function scrambleIcon(icon) {
       const paths=icon.querySelectorAll("path");
       const originalDValues=[];
 
       // Get initial path d values (conditionally)
-      paths.forEach((path) => {
+      paths.forEach((path,i) => {
+        const className=`path${i+1}`;
+        path.classList.add(className);
         if(path.getAttribute("d")) {
-          // Check for existence of "d" attribute
+          console.log(`Found d for ${className}`);
           originalDValues.push(path.getAttribute("d"));
+          console.log(originalDValues);
           path.setAttribute("transform","translate(0, 0)"); // Apply initial transform
         } else {
+          console.log(`Couldn't find D for ${className}`);
           // Handle paths without "d" attribute (e.g., skip or apply alternative effects)
         }
       });
 
-      // Scramble paths randomly (modifying "d" values)
       paths.forEach((path,i) => {
         const randomX=Math.random()*50-25;
         const randomY=Math.random()*50-25;
+        const randomCoordinates=randomX+","+randomY;
+        console.log(randomCoordinates);
+
         if(path.getAttribute("d")) {
-          // Modify "d" value to apply translation
-          const newDValue=path
-            .getAttribute("d")
-            .replace(/M\s*\d+,\s*\d+/,`M ${randomX}, ${randomY}`); // Replace initial "M" coordinates with random values
-          path.setAttribute("d",newDValue);
+          const pathDValue=path.getAttribute("d");
+          const regexPattern=/^([Mm]\s*)([^A-Za-z].*?)(?=[A-Za-z])/;
+          const match=pathDValue.match(regexPattern);
+
+          if(match) {
+            let coordinatesString;
+            if(match[0][0]===match[0][0].toUpperCase()) {
+              coordinatesString=match[0][0].toLowerCase()+randomCoordinates;
+            } else {
+              coordinatesString=match[0][0].toUpperCase()+randomCoordinates;
+            }
+
+            const newDValue=pathDValue.replace(regexPattern,coordinatesString);
+            path.setAttribute("d",newDValue);
+            console.log("Replacement command: "+coordinatesString+" , newDPath Value: "+newDValue);
+            console.log("Actual New Value: "+path.getAttribute("d"));
+          } else {
+            console.error("No match found. Unable to change d value for scramble.");
+          }
         }
       });
 
       // Reassemble on hover (using original "d" values)
       icon.addEventListener("mouseenter",() => {
         paths.forEach((path,i) => {
+          const className=`path${i+1}`;
+          console.log(`found path for reass ${className}`);
           if(path.getAttribute("d")) {
+            console.log(`found d for reass ${className}`);
             anime({
               targets: path,
-              d: originalDValues[i], // Restore original "d" value
+              d: originalDValues[i],
               duration: 500,
               easing: "easeOutElastic",
             });
+            console.log(`reass complete for ${className}`);
+            //I want to make the .icon-label for the reassembled icon visible here.
+            /*if() {
+              //this is where i want to call the new animation function. this should be done dynamically based on the current state of all four icons.
+              // if thery are reassembled, call the new animation function.
+              orbitAnimateSVG
+            }*/
+          } else {
+            console.error("Didn't grab d attribute for re-ass");
           }
         });
       });
     }
 
+    // Import Anime.js library if not already done
+    // import anime from 'animejs';
+
+    function orbitAnimateSVG() {
+      // Select the two SVG elements using their IDs or classes
+      const svg1=document.getElementById('javascript-icon');
+      const svg2=document.getElementById('html-icon');
+      const svg3=document.getElementById('css-icon');
+      const svg4=document.getElementById('inkscape-icon');
+
+      // Set initial positions
+      anime.set([svg1,svg2,svg3,svg4],{ translateX: '-100%',translateY: '50%' });
+
+      // Configure the animation timeline
+      const timeline=anime.timeline({
+        targets: [svg1,svg2,svg3,svg4],
+        translateX: '200%', // Move to the right
+        translateY: '50%', // Stay in the middle vertically
+        easing: 'cubicBezier(.5, .05, .1, .3)', // Customize easing
+        duration: 2000, // Total duration of the animation
+        loop: true, // Loop indefinitely
+      });
+
+      // Add keyframes for staggered movement
+      timeline.add({
+        targets: svg1,
+        translateX: '50%', // Move to the middle
+      });
+
+      timeline.add({
+        targets: svg2,
+        translateX: '50%', // Move to the middle
+      });
+
+      timeline.add({
+        targets: svg3,
+        translateX: '50%', // Move to the middle
+      });
+
+      timeline.add({
+        targets: svg4,
+        translateX: '50%', // Move to the middle
+      });
+
+      // Reverse animation for the second part
+      timeline.add({
+        targets: [svg1,svg2,svg3,svg4],
+        translateX: '-200%', // Move to the left
+        translateY: '50%', // Stay in the middle vertically
+      });
+
+      // Set the order for layering
+      timeline.add({
+        targets: svg2,
+        zIndex: 1, // Bring the right-to-left SVG to the top
+      });
+    }
+
     document.addEventListener("DOMContentLoaded",() => {
       const icons=document.querySelectorAll("div div div a svg.icon");
-      icons.forEach(icon => {
+      icons.forEach((icon) => {
         scrambleIcon(icon);
+        console.log("sent in icon for scramble");
       });
-    })
+    });
+
+    document.addEventListener("DOMContentLoaded",() => {
+      const dropdown=document.querySelector('.wrapper-dropdown-1');
+      const toggle=document.querySelector('.dropdown-toggle');
+      const options=document.querySelector('.dropdown');
+      const labels=document.querySelectorAll(".icon-label");
+      labels.forEach(label => {
+        label.style.display="none";
+      });
+      // Add event listener to toggle dropdown
+      toggle.addEventListener('click',() => {
+        options.classList.toggle('hidden');
+      });
+    });
   </script>
 </body>
+<footer>
+  <div class="footer">
+    <h4>Powered By:</h4>
+    <a href="https://www.github.com"><img src="./Assets/Brand-Icons/github.svg"></a>
+    <a href="https://animejs.com/"><img src="./Assets/Brand-Icons/animejs.svg"></a>
+    <a href="https://inkscape.org/"><img src="./Assets/Brand-Icons/inkscape.svg"></a>
+    <a href="https://developer.mozilla.org/en-US/docs/Web/HTML"><img src="./Assets/Brand-Icons/html5.svg"></a>
+    <a href="https://developer.mozilla.org/en-US/docs/Web/CSS"><img src="./Assets/Brand-Icons/css3.svg"></a>
+    <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript"><img
+        src="./Assets/Brand-Icons/javascript.svg"></a>
+    <a href="https://www.icons8.com/"><img src="./Assets/Brand-Icons/icons8.svg"></a>
+  </div>
+</footer>
 
 </html>
