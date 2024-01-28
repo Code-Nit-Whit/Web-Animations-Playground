@@ -1,5 +1,7 @@
 /* Define CSS variables */
 :root {
+    --theme-color: blue;
+    --theme-transp-color: rgba(0, 0, 255, 0.3);
     --primary-color: #222;
     --secondary-color: #333;
     --accent-color: #444;
@@ -41,7 +43,6 @@ header {
     height: 60px;
     z-index: 10;
     background-color: var(--secondary-color);
-    box-sizing: border-box;
 }
 
 #top-navbar {
@@ -59,14 +60,14 @@ header {
 #medium {
     font-size: 2rem;
     font-weight: bold;
-    color: blue;
+    color: var(--theme-color);
 }
 
 header h1 {
     font-size: var(--font-size-h1);
     white-space: nowrap;
     flex-shrink: 1;
-    margin:0 3rem;
+    margin: 0 3rem;
 }
 
 header a img {
@@ -74,21 +75,16 @@ header a img {
     margin-left: 1rem;
 }
 
+
+/*-----Menu, Input, Selection Elements-----*/
 .select-menu {
     display: flex;
     align-items: center;
-    justify-content:space-between;
+    justify-content: space-between;
     background-color: var(--secondary-color);
     border-radius: 5px;
     cursor: pointer;
     padding: 0.5rem 1rem;
-}
-
-/* Base styling */
-#ani-type-select {
-}
-
-#animation-select {
 }
 
 .drop-button {
@@ -104,24 +100,19 @@ header a img {
     white-space: nowrap;
     overflow: hidden;
     text-overflow: ellipsis;
-    margin:0 0.5rem;
+    margin: 0 0.5rem;
 }
 
-/* Options list */
 .options-list {
     display: none;
-    /* Initially hidden */
     position: absolute;
     top: 100%;
     left: 0;
     width: 100%;
     background-color: var(--secondary-color);
-    /* Use your defined color variable */
     border: 1px solid var(--accent-color);
-    /* Use your defined color variable */
     border-radius: 5px;
     z-index: 12;
-    /* Ensure it appears above other elements */
 }
 
 .options-list li {
@@ -131,17 +122,43 @@ header a img {
 
 .options-list li:hover {
     background-color: var(--accent-color);
-    /* Use your defined color variable */
 }
 
 #hamburger-menu {
     color: var(--primary-color);
+    border-style: none;
+    border-radius: 3px;
 }
 
+select:hover,
+#hamburger-menu:hover {
+    background-color: var(--theme-transp-color);
+    color: var(--text-color);
+}
+
+.select-menu:hover {
+    border: 3px solid var(--theme-transp-color);
+    padding: .35rem .85rem;
+}
+
+input[type="checkbox"]:checked {
+    background-color: var(--theme-color);
+}
+
+input[type="checkbox"] {
+    margin-right: 5px;
+}
+
+
 /* Side menu */
+#side-menu>* {
+    flex-grow: 0;
+    flex-shrink: 0;
+}
+
 #side-menu {
     position: fixed;
-    display:flex;
+    display: flex;
     flex-direction: column;
     justify-content: space-between;
     align-items: center;
@@ -149,10 +166,12 @@ header a img {
     top: 60px;
     left: 0;
     width: 25%;
+    min-width: 375px;
     height: 100%;
     background-color: var(--accent-color);
-    overflow-y: auto;
+    overflow: hidden;
     z-index: 11;
+    box-shadow: 1px 1px 8px var(--theme-transp-color);
 }
 
 #body-container,
@@ -163,7 +182,6 @@ header a img {
 /* Main content */
 #body-container {
     width: 100vw;
-    box-sizing: border-box;
     overflow: hidden;
     margin-top: 60px;
     margin-bottom: 70px;
@@ -224,18 +242,36 @@ a {
 }
 
 /* Responsiveness */
+@media only screen and (max-width: 980px) {
+    #side-menu {
+        overflow-y: scroll;
+    }
+}
+
 @media only screen and (max-width: 768px) {
     #side-menu {
         width: 50%;
     }
+
+    #method,
+    #medium,
     #top-navbar h1 {
-        font-size: 1.5rem;
-        
+        font-size: 1.25rem;
     }
 }
 
 @media only screen and (max-width: 480px) {
     #side-menu {
         width: 100%;
+    }
+
+    #method,
+    #medium,
+    #top-navbar h1 {
+        font-size: 0.95rem;
+    }
+
+    header h1 {
+        margin: 0 1rem;
     }
 }

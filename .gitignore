@@ -9,7 +9,8 @@
 !Assets
 !Assets/Brand-Icons
 !Assets/Brand-Icons/**
-!Assets/blue-www.svg
+!Assets/Misc SVGs/
+!Assets/Misc SVGs/**
 
 !index.html
 !styles.css
