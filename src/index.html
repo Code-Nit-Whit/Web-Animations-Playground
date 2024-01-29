@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Web Animations: Method and Medium</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Noto+Sans+Symbols+2&family=Roboto+Mono:ital,wght@0,100..700;1,100..700&display=swap"
+        rel="stylesheet">
+    <style>
+
+    </style>
+</head>
+
+<body>
+    <header>
+        <nav id="top-navbar">
+            <button id="hamburger-menu">☰</button>
+            <h1>Web Animations: <span id="method">[Method]</span> and <span id="medium">[Medium]</span></h1>
+        </nav>
+    </header>
+
+    <div id="body-container">
+        <aside id="side-menu" class="select-parent">
+            <div id="preference-select-container">
+                <div id="select-row-1" class="select-menu">
+                    <span class="current-selection">Category</span>
+                    <img class="custom-arrow" type="image/svg+xml" src="../Assets/Misc SVGs/custom-arrow.svg"
+                        alt="&#x25BC;">
+                    <ul class="options-list">
+                        <li class="select-option">Placeholder1</li>
+                        <li class="select-option">Placeholder2</li>
+                        <li class="select-option">Placeholder3</li>
+                    </ul>
+                </div>
+                <div id="select-row-2" class="flex-row">
+                    <div id="animation-select" class="select-menu-disabled">
+                        <span class="current-selection">Animation</span>
+                        <img class="custom-arrow" type="image/svg+xml" src="../Assets/Misc SVGs/custom-arrow.svg"
+                            alt="&#x25BC;">
+                        <ul class="options-list">
+                            <li class="select-option">Placeholder1</li>
+                            <li class="select-option">Placeholder2</li>
+                            <li class="select-option">Placeholder3</li>
+                        </ul>
+                    </div>
+                    <button class="sb-button" id="preferences-button">Reset</button>
+                </div>
+                <div id="preferences" class="preferences-grid">
+                    <div class="toggle-grid-container">
+                        <label class="toggle-label" for="auto-play-toggle">Autoplay:</label>
+                        <input class="toggle-checkbox" id="auto-play-toggle" type="checkbox" checked></input>
+                    </div>
+                    <div class="toggle-grid-container">
+                        <label class="toggle-label" for="loop-toggle">Loop:</label>
+                        <input class="toggle-checkbox" id="loop-toggle" type="checkbox" checked></input>
+                    </div>
+                    <div class="toggle-grid-container">
+                        <label class="toggle-label" for="s-screen-toggle">Split Screen:</label>
+                        <input class="toggle-checkbox" id="s-screen-toggle" type="checkbox"></input>
+                    </div>
+                    <div class="toggle-grid-container">
+                        <label class="toggle-label" for="codepen-toggle">CodePen Editor:</label>
+                        <input class="toggle-checkbox" id="codepen-toggle" type="checkbox"></input>
+                    </div>
+                </div>
+            </div>
+
+            <div id="param-screen-case">
+                <div id="param-screen">
+                    <div id="params-row1">
+                        <div></div>
+                    </div>
+                    <div id="params-row2" class="screen-sub-grid">
+                        <div></div>
+                        <div></div>
+                        <div></div>
+                    </div>
+                    <div id="params-row3" class="screen-sub-grid">
+                        <div></div>
+                        <div></div>
+                        <div></div>
+                    </div>
+                </div>
+
+            </div>
+
+            <div id="controls-container">
+                <div id="seek-control-container" class="flex-row slider-container">
+                    <div class="flex-row">
+                        <label for="seek-control">Frame</label>
+                        <div id="seek-value-container"> #<span class="themed-sb-text" id="seek-control-value">0</span>
+                        </div>
+                    </div>
+                    <input type="range" min="0" max="100" value="0" class="slider" id="seek-control">
+                </div>
+                <div id="playback-buttons">
+                    <button class="sb-control-button sb-symbol sb-button" id="skip-reverse-button">⏮</button>
+                    <button class="sb-control-button sb-symbol sb-button" id="seek-reverse-button">⏪</button>
+                    <button class="sb-control-button sb-symbol sb-button" id="play-pause-button">⏯ </button>
+                    <button class="sb-control-button sb-symbol sb-button" id="stop-button">⏹</button>
+                    <button class="sb-control-button sb-symbol sb-button" id="seek-forward-button">⏩</button>
+                    <button class="sb-control-button sb-symbol sb-button" id="skip-forward-button">⏭</button>
+                </div>
+                <div id="speed-control-container" class="flex-row slider-container">
+                    <div class="flex-row">
+                        <label for="speed-control">Speed:</label>
+                        <div><span class="themed-sb-text" id="speed-control-value">100</span>%</div>
+                    </div>
+                    <input type="range" min="1" max="200" value="100" class="slider" id="speed-control">
+                </div>
+            </div>
+            <div id="collapse-button">&#8942;</div>
+        </aside>
+        <main> <!--this area is what gets replace or edited for individual animations-->
+            <style>
+                /*-------Animation Styling Goes Here-------*/
+            </style>
+            <div id="animation-content">
+                <div id="animation-header">
+                    <h2>[Animation Name]</h2>
+                    <p>[Animation Description]</p>
+                </div>
+                <div id="animation-container">
+                    <!-- Animation content goes here -->
+                </div>
+                <div id="animation-footer">
+                    <a href="">[Animation Source/ Repository/ Gist]</a>
+                </div>
+                <div id="animation-divider"></div>
+            </div>
+            <div class="codepen-embed">
+                <h2>CodePen Editor</h2>
+                <p class="codepen" data-height="300" data-default-tab="js,result" data-slug-hash="RwdjGZP"
+                    data-editable="true" data-user="Code-Nit-Whit"
+                    style="height: 300px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;">
+                    <span>See the Pen <a href="https://codepen.io/Code-Nit-Whit/pen/RwdjGZP">
+                            Scrambled Icon</a> by Code_Nit_Whit (<a
+                            href="https://codepen.io/Code-Nit-Whit">@Code-Nit-Whit</a>)
+                        on <a href="https://codepen.io">CodePen</a>.</span>
+                </p>
+                <script async src="https://cpwebassets.codepen.io/assets/embed/ei.js"></script>
+            </div>
+            <script id="animation-script" src="">
+                /*--------Animation Script goes here--------*/
+            </script>
+        </main>
+    </div><!--End of body container-->
+
+    <footer>
+        <div id="resource-icons">
+        </div>
+        <div id="socials-icons">
+            <a href="https://github.com/Code-Nit-Whit/Web-Animations" target="_blank"><img id="github-icon"
+                    src="../Assets/Brand-Icons/github.svg" alt="GitHub"></a>
+            <a id="codepen-icon" href="https://codepen.io/collection/WvPoOR" target="_blank"><img
+                    src="../Assets/Brand-Icons/codepen.svg" alt="CodePen"></a>
+            <a id="dev-icon" href="https://dev.to/code-nit-whit" target="_blank"><img
+                    src="..\Assets\Brand-Icons\dev.svg" alt="Dev"></a>
+        </div>
+        <p>Copyright &copy; 2024 Code-Nit-Whit</p>
+    </footer>
+
+    <script src="maestro.js"></script>
+    <script>
+
+    </script>
+</body>
+
+</html>
