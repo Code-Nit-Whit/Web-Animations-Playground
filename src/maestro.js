@@ -97,11 +97,22 @@ document.addEventListener("DOMContentLoaded", () => {
         button.addEventListener('click',(event) => {
             console.log(button);
         })
-    })
+    })*/
 
-    const HBButton = document.querySelector(".sb-hb-button");
+    const HBButton = document.querySelector("#hamburger-menu");
+    let open = true;
+    const sideMenu = document.querySelector("aside");
     HBButton.addEventListener('click',(event) => {
-        console.log(HBButton);
+        console.log("event fired");
+        if (open) {
+            sideMenu.style.transform = 'translateX(-100%)'; 
+            console.log("closed");
+            open = false;
+        } else {
+            sideMenu.style.transform = 'translateX(0)'; 
+            console.log("opened");
+            open = true;
+        }
     })
-    */
+    
 });
