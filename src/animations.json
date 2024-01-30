@@ -1,0 +1,18 @@
+{
+  "category1": {
+    "value": "cValue1",
+    "items": [
+      { "label": "Item 1", "value": "12345" },
+      { "label": "Item 2", "value": "67890" }
+    ]
+  },
+  "category2": {
+    "value": "cValue2",
+    "items": [
+      { "label": "Item 1", "value": "54321" },
+      { "label": "Item 2", "value": "09876" }
+    ]
+  }
+}
+
+  
