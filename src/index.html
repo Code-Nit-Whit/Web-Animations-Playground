@@ -26,6 +26,29 @@
     </header>
 
     <div id="body-container">
+        <!--<div id = "param-screen-container" class="popped-in-screen">
+            <div id="draggable-handle">
+                <span id="drag-texture">&#x283F;</span>
+                <div id="popout-arrow"  class="popped-in-arrow">&#129170;</div>
+            </div>
+            <div id="param-screen-case">
+                <div id="param-screen">
+                    <div id="params-row1">
+                        <div></div>
+                    </div>
+                    <div id="params-row2" class="screen-sub-grid">
+                        <div></div>
+                        <div></div>
+                        <div></div>
+                    </div>
+                    <div id="params-row3" class="screen-sub-grid">
+                        <div></div>
+                        <div></div>
+                        <div></div>
+                    </div>
+                </div>
+            </div>
+        </div>-->
         <aside id="side-menu" class="select-parent">
             <div id="preference-select-container">
                 <div id="select-row-1" class="select-menu">
@@ -71,52 +94,62 @@
                 </div>
             </div>
 
-            <div id="param-screen-case">
-                <div id="param-screen">
-                    <div id="params-row1">
-                        <div></div>
-                    </div>
-                    <div id="params-row2" class="screen-sub-grid">
-                        <div></div>
-                        <div></div>
-                        <div></div>
-                    </div>
-                    <div id="params-row3" class="screen-sub-grid">
-                        <div></div>
-                        <div></div>
-                        <div></div>
-                    </div>
-                </div>
-
-            </div>
-
-            <div id="controls-container">
-                <div id="seek-control-container" class="flex-row slider-container">
-                    <div class="flex-row">
-                        <label for="seek-control">Frame</label>
-                        <div id="seek-value-container"> #<span class="themed-sb-text" id="seek-control-value">0</span>
-                        </div>
-                    </div>
-                    <input type="range" min="0" max="100" value="0" class="slider" id="seek-control">
-                </div>
-                <div id="playback-buttons">
-                    <button class="sb-control-button sb-symbol sb-button" id="skip-reverse-button">⏮</button>
-                    <button class="sb-control-button sb-symbol sb-button" id="seek-reverse-button">⏪</button>
-                    <button class="sb-control-button sb-symbol sb-button" id="play-pause-button">⏯ </button>
-                    <button class="sb-control-button sb-symbol sb-button" id="stop-button">⏹</button>
-                    <button class="sb-control-button sb-symbol sb-button" id="seek-forward-button">⏩</button>
-                    <button class="sb-control-button sb-symbol sb-button" id="skip-forward-button">⏭</button>
-                </div>
-                <div id="speed-control-container" class="flex-row slider-container">
-                    <div class="flex-row">
-                        <label for="speed-control">Speed:</label>
-                        <div><span class="themed-sb-text" id="speed-control-value">100</span>%</div>
-                    </div>
-                    <input type="range" min="1" max="200" value="100" class="slider" id="speed-control">
-                </div>
-            </div>
             <div id="collapse-button">&#8942;</div>
         </aside>
+        <div id="param-screen-container" class="popped-in-screen">
+            <div id="drag-centerer-container">
+                <div id="draggable-handle">
+                    <span id="drag-texture">&#x283F;</span>
+                    <div id="popout-arrow" class="popped-in-arrow">&#129170;</div>
+                </div>
+                <div id="param-screen-case">
+                    <div id="param-screen">
+                        <div id="params-row1">
+                            <div></div>
+                        </div>
+                        <div id="params-row2" class="screen-sub-grid">
+                            <div></div>
+                            <div></div>
+                            <div></div>
+                        </div>
+                        <div id="params-row3" class="screen-sub-grid">
+                            <div></div>
+                            <div></div>
+                            <div></div>
+                        </div>
+                    </div><!--End of screen-->
+                </div> <!--End of screen case-->
+            </div>
+            <div id="controls-container">
+                <div id="controls-slide-tab">▼</div>
+                <div id="controls-overlay">
+                    <div id="seek-control-container" class="flex-row slider-container">
+                        <div class="flex-row">
+                            <label for="zoom-control">Zoom</label>
+                            <div id="zoom-value-container"><span class="themed-sb-text"
+                                    id="zoom-control-value">100</span>%
+                            </div>
+                        </div>
+                        <input type="range" min="0" max="100" value="0" class="slider" id="seek-control">
+                    </div>
+                    <div id="playback-buttons">
+                        <button class="sb-control-button sb-symbol sb-button" id="skip-reverse-button">⏮</button>
+                        <button class="sb-control-button sb-symbol sb-button" id="seek-reverse-button">⏪</button>
+                        <button class="sb-control-button sb-symbol sb-button" id="play-pause-button">⏯ </button>
+                        <button class="sb-control-button sb-symbol sb-button" id="stop-button">⏹</button>
+                        <button class="sb-control-button sb-symbol sb-button" id="seek-forward-button">⏩</button>
+                        <button class="sb-control-button sb-symbol sb-button" id="skip-forward-button">⏭</button>
+                    </div>
+                    <div id="speed-control-container" class="flex-row slider-container">
+                        <div class="flex-row">
+                            <label for="speed-control">Speed:</label>
+                            <div><span class="themed-sb-text" id="speed-control-value">100</span>%</div>
+                        </div>
+                        <input type="range" min="1" max="200" value="100" class="slider" id="speed-control">
+                    </div>
+                </div>
+            </div>
+        </div><!--End of screaan container-->
         <main> <!--this area is what gets replace or edited for individual animations-->
             <style>
                 /*-------Animation Styling Goes Here-------*/
@@ -140,25 +173,15 @@
                 <p class="afterthought">*The CodePen for this animation may contain a simplified version of the
                     animation you see above. To see the code to the full animation, click the GitHub Gist checkbox in
                     the left side menu.</p>
-                <p class="codepen" data-height="300" data-default-tab="js,result" data-slug-hash="RwdjGZP"
-                    data-editable="true" data-user="Code-Nit-Whit"
-                    style="height: 300px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;">
-                    <span>See the Pen <a href="https://codepen.io/Code-Nit-Whit/pen/RwdjGZP">
-                            Scrambled Icon</a> by Code_Nit_Whit (<a
-                            href="https://codepen.io/Code-Nit-Whit">@Code-Nit-Whit</a>)
-                        on <a href="https://codepen.io">CodePen</a>.</span>
-                </p>
-                <script async src="https://cpwebassets.codepen.io/assets/embed/ei.js"></script>
+
             </div>
-            <script id="animation-script" src="">
+            <!-- <script  id="animation-script">
                 /*--------Animation Script goes here--------*/
-            </script>
+            </script>-->
         </main>
     </div><!--End of body container-->
 
     <footer>
-        <div id="resource-icons">
-        </div>
         <div id="socials-icons">
             <a href="https://github.com/Code-Nit-Whit/Web-Animations" target="_blank"><img id="github-icon"
                     src="../Assets/Brand-Icons/github.svg" alt="GitHub"></a>
@@ -171,9 +194,7 @@
     </footer>
 
     <script src="maestro.js"></script>
-    <script>
 
-    </script>
 </body>
 
 </html>

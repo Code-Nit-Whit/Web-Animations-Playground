@@ -1,5 +1,5 @@
-//  ╔═══╗     ╔╗        ╔╗          ╔╗             ╔═══╗        ╔╗                
-//  ║╔═╗║    ╔╝╚╗       ║║         ╔╝╚╗            ║╔══╝       ╔╝╚╗               
+//  ╔═══╗     ╔╗        ╔╗          ╔╗             ╔═══╗        ╔╗
+//  ║╔═╗║    ╔╝╚╗       ║║         ╔╝╚╗            ║╔══╝       ╔╝╚╗
 //  ║║ ║║╔══╗╚╗╔╝╔╗     ║║   ╔╗╔══╗╚╗╔╝╔══╗╔═╗     ║╚══╗╔══╗╔═╗╚╗╔╝╔═╗╔══╗╔══╗╔══╗
 //  ║╚═╝║║╔╗║ ║║ ╠╣╔═══╗║║ ╔╗╠╣║╔╗║ ║║ ║╔╗║║╔╝     ║╔══╝║╔╗║║╔╝ ║║ ║╔╝║╔╗║║══╣║══╣
 //  ║╔═╗║║║║║ ║╚╗║║╚═══╝║╚═╝║║║║║║║ ║╚╗║║═╣║║     ╔╝╚╗  ║╚╝║║║  ║╚╗║║ ║║═╣╠══║╠══║
@@ -7,14 +7,14 @@
 //
 //                         FOR FORMATTED COMMENT BLOCKS
 //
-/*٩◔̯◔۶ █████████▓▓▓▓▓▓▒▒▒▒▒░░ ░Web Animations Main Script ░░░▒▒▒▒▒▓▓▓▓▓▓▓████████ ఠ ͟ಠ*/                                                              
+/*٩◔̯◔۶ █████████▓▓▓▓▓▓▒▒▒▒▒░░ ░Web Animations Main Script ░░░▒▒▒▒▒▓▓▓▓▓▓▓████████ ఠ ͟ಠ*/
 /*░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░*/
 /*░File: maestro.js          ░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░*/
 /*░Version: 0.0.1            ░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░*/
-/*░Author: Code-Nit-Whit     ░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░*/         
-/*░Creation Date: 01-29-2024 ░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░*/        
-/*░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░*/ 
-/*░Last Modified By: Code-Nit-Whit ░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░*/                   
+/*░Author: Code-Nit-Whit     ░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░*/
+/*░Creation Date: 01-29-2024 ░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░*/
+/*░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░*/
+/*░Last Modified By: Code-Nit-Whit ░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░*/
 /*░Last Modified Date: 02-XX-2024  ░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░*/
 /*░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░*/
 /*░Description: This JavaScript file handles the dynamic population and behavior of   ░*/
@@ -24,16 +24,14 @@
 /*░░animation specific markup, styling, and scripting from GitHub Gists formatted to  ░*/
 /*░░work with this application.                                                       ░*/
 /*░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░*/
-/*░Source: https://github.com/Code-Nit-Whit/Web-Animations/src/maestro.js ░░░░░░░░░░░░░*/                                 
-/*░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░*/                                                              
+/*░Source: https://github.com/Code-Nit-Whit/Web-Animations/src/maestro.js ░░░░░░░░░░░░░*/
 /*░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░*/
-/*¯\_(ツ)_/¯ ████████▓▓▓▓▓▒▒▒Copyright ©️ 2024 Code-Nit-Whit.▒▒▒▓▓▓▓▓▓████████ t(- n -)t*/ 
-
-
+/*░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░*/
+/*¯\_(ツ)_/¯ ████████▓▓▓▓▓▒▒▒Copyright ©️ 2024 Code-Nit-Whit.▒▒▒▓▓▓▓▓▓████████ t(- n -)t*/
 
 /* ##  Select Menu/ Content Injection Code ## */
 
-function populateSelectCategories() {// boilerplate. needs to be fleshed out
+/*function populateSelectCategories() {// boilerplate. needs to be fleshed out
   fetch('categories.json') // Replace with your actual JSON file path
     .then(response => response.json())
     .then(data => {
@@ -50,9 +48,9 @@ function populateSelectCategories() {// boilerplate. needs to be fleshed out
         selectElement.appendChild(newOption);
       });
     });
-}
+}*/
 
-function handleSelectMenuClick(event, menus) {
+/*function handleSelectMenuClick(event, menus) {
   const clicked = event.target;
   const parent = clicked.parentElement;
   let selectMenu;
@@ -111,10 +109,10 @@ function handleSelectMenuClick(event, menus) {
         //clickWrapper.style.display='block';
       }
     }
-  }
+  }*/
 
-  //This function is not ready, it's boilerplate code.
-  function populateAnimationList() {
+//This function is not ready, it's boilerplate code.
+/*function populateAnimationList() {
     const selectCategory = document.getElementById("category-select");
     const selectItems = document.getElementById("item-select");
     const selectedCategory = this.value; // Get the selected category
@@ -132,15 +130,15 @@ function handleSelectMenuClick(event, menus) {
       newOption.value = item.value;
       selectItems.appendChild(newOption);
     }
-  }
+  }*/
 
-  //boilerplate code. Needs to be refactored
-  async function handleGistContent() {
+//boilerplate code. Needs to be refactored
+/*async function handleGistContent() {
     // Replace "temp-content.json" with your desired filename
-    const tempJsonFile = "temp-content.json";
+    const tempJsonFile = "session.json";
 
     //boilerplate code. Needs to be refactored
-    async function saveToTempJson(contentObject) {
+    /*async function saveToTempJson(contentObject) {
       const stringifiedContent = JSON.stringify(contentObject);
       try {
         await fetch(tempJsonFile, {
@@ -153,10 +151,10 @@ function handleSelectMenuClick(event, menus) {
       } catch (error) {
         console.error("Error saving content to JSON:", error);
       }
-    }
+    }*/
 
-    //boilerplate code. Needs to be refactored
-    async function populateAndInjectContent(gistContent) {
+//boilerplate code. Needs to be refactored
+/*async function populateAndInjectContent(gistContent) {
       if (!gistContent) return; // Check for null content
 
       // Parse JSON content into object
@@ -175,52 +173,56 @@ function handleSelectMenuClick(event, menus) {
 
       // Inject CSS content (assuming you have a style element)
       styleElement.textContent = cssContent;
-    }
+    }*/
 
-    //boilerplate code. Needs to be refactored
-    try {
+//boilerplate code. Needs to be refactored
+/*try {
       const response = await fetch(gistUrl);
       const data = await response.json();
-      return data.files["content.json"].content; // Assuming content is in "content.json" file
       populateAndInjectContent();
       saveToTempJson();
+      return data.files["content.json"].content; // Assuming content is in "content.json" file
     } catch (error) {
       console.error("Error fetching Gist content:", error);
       // Handle error gracefully (e.g., display message to user)
       return null;
-    }
+    }*/ /*
   }
 
   orchestrateSelection();
-}
-
+}*/
 
 /* ## Event Listeners ##  */
 
 document.addEventListener("DOMContentLoaded", () => {
-  populateSelectCategories();
-  const menus = document.querySelectorAll(".select-menu");
+  //populateSelectCategories();
+  /* const menus = document.querySelectorAll(".select-menu");
   menus.forEach((menu) => {
     menu.addEventListener("click", (event) => {
       event.stopPropagation();
       handleSelectMenuClick(event, menus);
     });
-  });
+  });*/
 
-  
   /*const checkBoxes = document.querySelectorAll(".toggle-checkbox");
   checkBoxes.forEach((checkbox) => { //boilerplate code. Needs to be refactored
       checkbox.addEventListener('click',(event) => {
+          event.stopPropagation();
           console.log(checkbox);
       });
   });
 
-  const sliders = document.querySelectorAll(".slider");
-  sliders.forEach((slider) => {//boilerplate code. Needs to be refactored
-      slider.addEventListener('input',(event) => {
-          console.log(slider);
-      });
+  const zoomSlider = document.querySelector("#zoom-slider");
+  const speedSlider = document.querySelector("#speed-slider");
+  zoomSlider.addEventListener('input',(event) => {
+      event.stopPropagation();
+      console.log(zoomSlider);
   });
+  speedSlider.addEventListener('input',(event) => {
+      event.stopPropagation();
+      console.log(zoomSlider);
+  })
+
 
   const buttons = document.querySelectorAll(".sb-button");
   buttons.forEach((button) => { //boilerplate code. Needs to be refactored
@@ -229,16 +231,154 @@ document.addEventListener("DOMContentLoaded", () => {
       });
   });*/
 
+  /* Hamburger and elipses side menu buttons */
   const HBButton = document.querySelector("#hamburger-menu");
   let open = true;
+  let poppedOut = false;
   const sideMenu = document.querySelector("aside");
-  HBButton.addEventListener('click',(event) => {
-      if (open) {
-          sideMenu.style.transform = 'translateX(-100%)'; 
-          open = false;
-      } else {
-          sideMenu.style.transform = 'translateX(0)'; 
-          open = true;
-      }
+  const popOutScreen = document.getElementById("param-screen-container");
+  HBButton.addEventListener("click", (event) => {
+    event.stopPropagation();
+    if (open && !poppedOut) {
+      sideMenu.style.transform = "translateX(-400px)";
+      popOutScreen.style.transform = "translateX(-400px)";
+      open = false;
+    } else if (open && poppedOut) {
+      sideMenu.style.transform = "translateX(-400px)";
+      open = false;
+    } else if (!open && poppedOut) {
+      sideMenu.style.transform = "translateX(0)";
+      open = true;
+    } else if (!open && !poppedOut) {
+      sideMenu.style.transform = "translateX(0)";
+      popOutScreen.style.transform = "translateX(0)";
+      open = true;
+    }
+  });
+
+  const collapser = document.querySelector("#collapse-button");
+  collapser.addEventListener("click", (event) => {
+    event.stopPropagation();
+    if (!poppedOut) {
+      popOutScreen.style.transform = "translateX(-400px)";
+    }
+    sideMenu.style.transform = "translateX(-400px)";
+    open = false;
+  });
+
+  const controls = document.getElementById("controls-container");
+  const controlsTab = document.getElementById("controls-slide-tab");
+  let panelControlPanlOpen = false;
+  controlsTab.addEventListener("click", () => {
+    event.stopPropagation();
+    if (panelControlPanlOpen) {
+      popOutScreen.style.height = "250px";
+      setTimeout(() => {
+        controls.style.transform = "translateY(0px)";
+      }, 1000);
+      panelControlPanlOpen = false;
+    } else {
+      controls.style.transform = "translateY(130px)";
+      controlsTab.style.transform = "translateY(10px)";
+      setTimeout(() => {
+        popOutScreen.style.height = "120px";
+      }, 1000);
+      panelControlPanlOpen = true;
+    }
+  });
+
+  /* Pop-out screen */
+  const dragHandle = document.getElementById("draggable-handle");
+  const popArrow = document.getElementById("popout-arrow");
+
+  dragHandle.addEventListener("click", () => {
+    event.stopPropagation();
+    if (!dragHandle.classList.contains("slid-out") && !poppedOut) {
+      const originalLeft = popOutScreen.getBoundingClientRect().left;
+      const originalTop = popOutScreen.getBoundingClientRect().top;
+      dragHandle.classList.add("slid-out");
+      dragHandle.classList.remove("slid-in");
+      popOutScreen.classList.remove("popped-in-screen");
+      popOutScreen.classList.add("popped-out-screen");
+      popArrow.classList.add("popped-out-arrow");
+      popArrow.classList.remove("popped-in-arrow");
+      poppedOut = true;
+      setTimeout(() => {
+        sideMenu.style.transform = "translateX(-400px)";
+        open = false;
+      }, 2000);
+      const arrow = document.getElementById("popout-arrow");
+      arrow.addEventListener("click", () => {
+        event.stopPropagation();
+        const currentLeft = popOutScreen.getBoundingClientRect().left;
+        const currentTop = popOutScreen.getBoundingClientRect().top;
+        // Calculate difference between current and original position
+        const deltaX = originalLeft - currentLeft;
+        const deltaY = originalTop - currentTop;
+        poppedOut = false;
+        sideMenu.style.transform = "translateX(0)";
+        open = true;
+        dragHandle.classList.add("slid-in");
+        dragHandle.classList.remove("slid-out");
+        setTimeout(() => {
+          popOutScreen.style.transform = `translate(${deltaX}px, ${deltaY}px)`;
+        }, 3000);
+        setTimeout(() => {
+          popOutScreen.classList.remove("popped-out-screen");
+          popOutScreen.classList.add("popped-in-screen");
+          popArrow.classList.add("popped-in-arrow");
+          popArrow.classList.remove("popped-out-arrow");
+        }, 4500);
+      });
+    }
+  });
+
+  let dragging = false;
+  let initialX, initialY;
+  let previousX, previousY;
+
+  dragHandle.addEventListener("mousedown", (event) => {
+    event.stopPropagation();
+    if (poppedOut) {
+      dragging = true;
+      // Adjust the initial position calculation to account for any offset
+      initialX = event.clientX;
+      initialY = event.clientY;
+      previousX = initialX;
+      previousY = initialY;
+    }
+  });
+  document.addEventListener("mousemove", (event) => {
+    event.stopPropagation();
+    if (dragging) {
+      const currentX = event.clientX;
+      const currentY = event.clientY;
+      const deltaX = currentX - previousX;
+      const deltaY = currentY - previousY;
+
+      // Calculate the new position of the handle
+      let newX = popOutScreen.offsetLeft + deltaX;
+      let newY = popOutScreen.offsetTop + deltaY;
+
+      // Restrict movement within the visible area of the screen
+      const maxWidth = window.innerWidth - popOutScreen.offsetWidth;
+      const maxHeight = window.innerHeight - popOutScreen.offsetHeight;
+
+      newX = Math.max(0, Math.min(newX, maxWidth));
+      newY = Math.max(0, Math.min(newY, maxHeight));
+
+      // Update the position of the handle
+      popOutScreen.style.left = `${newX}px`;
+      popOutScreen.style.top = `${newY}px`;
+
+      // Update the previous cursor position
+      previousX = currentX;
+      previousY = currentY;
+    }
+  });
+
+  document.addEventListener("mouseup", () => {
+    event.stopPropagation();
+    dragging = false;
   });
 });
