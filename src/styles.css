@@ -269,6 +269,8 @@ body .options-list {
     border-radius: 3px;
 }
 
+
+
 select:hover,
 #hamburger-menu:hover {
     background-color: var(--theme-transp-color);
@@ -298,16 +300,7 @@ select:hover,
     display: flex;
     flex-direction: column;
     margin-bottom:10px;
-    transition: transform 1.5s, height 1s;
     z-index: 100;
-}
-
-.popped-out-screen {
-    transform: scale(1.05);
-}
-
-.popped-in-screen {
-    transform: scale(1);
 }
 
 #drag-centerer-container {
@@ -349,59 +342,16 @@ select:hover,
     border: 2px solid silver;
     border-style: outset;
     border-radius:5px;
-    transition: translate ease-in-out 0.5s, translateX 1s ease-out;
     z-index:-1;
 }
 
-.slid-out {
-    animation: slide-out 2s;
-    animation-fill-mode: forwards;
-    transform-origin: center;
+.drag-texture {
     cursor: move;
     user-select: none;
 }
 
-.slid-in {
-    animation: slide-in 2s;
-    animation-fill-mode: forwards;
-    transform-origin: center;
-    cursor: pointer;
-    user-select: none;
-}
-  
-@keyframes slide-out {
-    0% {
-        transform: scale(1);
-    }
-    10% {
-        transform: translateX(0) scale(0.8);
-    }
-    90% {
-        transform: translateX(40px) scale(0.8);
-    }
-    100% {
-        transform: translateX(40px) scale(1);
-    }
-}
-
-@keyframes slide-in {
-    0% {
-        transform: scale(1);
-    }
-    10% {
-        transform: translateX(40px) scale(0.8);
-    }
-    90% {
-        transform: translateX(0px) scale(0.8);
-    }
-    100% {
-        transform: translateX(0px) scale(1);
-    }
-}
-
 #popout-arrow {
     font-size:var(--font-size-h1);
-    transition: rotate ease-out .2s;
     margin: auto 0;
     padding-top:2px;
     cursor:pointer;

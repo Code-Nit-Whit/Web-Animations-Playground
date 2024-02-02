@@ -1,0 +1,63 @@
+/* ------ Keyframe Animations- Wesite Level -------- */
+/* See anim-controls.js for imported animation 
+controls implemented with the Web Animaitons API */
+
+/* #region Drag Handle */
+/* ##  Drag Handle  ## */
+.dHandle-slideOut {
+    animation: dhandle-slide-out 1s forwards;
+    transform-origin: center; 
+}
+@keyframes dHandle-slide-out {
+    0% {
+        transform: translateX(0);
+    }
+    100% {
+        transform: translateX(40px);
+    }
+}
+
+.dHandle-scaleDown {
+    animation: dHandle-scale-down 0.5s forwards;
+}
+@keyframes dHandle-scale-down {
+    0% {
+        transorm: scale(1);
+    }
+    100% {
+        transform: scale(0.8);
+    }
+}
+/* #endregion */
+
+/* #region Draggable Screen NOT COMPLETE */
+/* -Screen move animation has dynamically set values. 
+defined in web api code Animation created in maestro.js */
+.screen-popOut {
+    animation: screen-pop-out 0.5s forwards;
+}
+@keyframes screen-pop-out {
+    0% {
+        transform: scale(1);
+    }
+    100% {
+        transform: scale(1.05);
+    }
+    
+}
+/* #endregion */
+
+/* #region Side Menu/ Screen Display NOT COMPLETE */
+/* Screen is conditional: see web api code in maestro.js for different implementations */
+.sideMenu-hide {
+    animation: side-menu-show 1s forwards;
+}
+@keyframes side-menu-show {
+    0% {
+        transform: translate(-400px)
+    }
+    100% {
+        transform: translate(0)
+    }
+}
+/* #endregion */

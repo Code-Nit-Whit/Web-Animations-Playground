@@ -1,3 +1,4 @@
+//#region Header Comment
 //  ╔═══╗     ╔╗        ╔╗          ╔╗             ╔═══╗        ╔╗
 //  ║╔═╗║    ╔╝╚╗       ║║         ╔╝╚╗            ║╔══╝       ╔╝╚╗
 //  ║║ ║║╔══╗╚╗╔╝╔╗     ║║   ╔╗╔══╗╚╗╔╝╔══╗╔═╗     ║╚══╗╔══╗╔═╗╚╗╔╝╔═╗╔══╗╔══╗╔══╗
@@ -28,8 +29,9 @@
 /*░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░*/
 /*░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░*/
 /*¯\_(ツ)_/¯ ████████▓▓▓▓▓▒▒▒Copyright ©️ 2024 Code-Nit-Whit.▒▒▒▓▓▓▓▓▓████████ t(- n -)t*/
+//#endregion 
 
-/* ##  Global Variables ## */
+//#region Global Variables
 const sideMenu = document.querySelector("aside");
 const popOutScreen = document.getElementById("param-screen-container");
 const playbackControls = document.getElementById("controls-container");
@@ -41,9 +43,129 @@ let sideMenuOpen = true; //Side Menu
 let controlsOpen = false; //Playback Controls
 let dragging = false; //Drag Handle -> Popout Screen
 let screenDraggable = false; //Drag Handle Arrow -> Popout Screen, also used in side menu toggle funciton
+//#endregion
 
-/* ##  Select Menu/ Content Injection Functions ## */
+//**************************************************************************
+//#region ANIMATION OBJECTS LIST:
+/*  
+    dragHandleSlideOutAnimation, dragHandleScaleDownAnimation
+    screenPopOutAnimation, screenMoveAnimation, reverseScreenMoveAnimation,
+    sideMenuHideAnimation, screenHideAnimation
+*/
+//#endregion
+//#region Animation Object Definitions  !!!!NEED TO CHANGE PROPERTY AND CLASS VALUES TO WORK!!!!!
+/* Drag Handle- Slide Out */
+const computedStyles = window.getComputedStyle(dragHandle);
+const keyframes = [
+  { transform: computedStyles.getPropertyValue('transform') },
+  { transform: 'translateX(40px)' }
+];
+const options = {
+  duration: 1000,
+  easing: 'ease',
+  fill: 'forwards'
+};
+const dragHandleSlideOutAnimation = new Animation(new KeyframeEffect(dragHandle, keyframes, options), document.timeline);
 
+/* Drag Handle- Scale down */
+const dragHandleScaleDownStyles = window.getComputedStyle(dragHandle);
+const dragHandleScaleDownKeyframes = [
+  { transform: dragHandleScaleDownStyles.getPropertyValue('transform') },
+  { transform: 'scale(0.8)' }
+];
+const dragHandleScaleDownOptions = {
+  duration: 500,
+  easing: 'ease',
+  fill: 'forwards'
+};
+const dragHandleScaleDownAnimation = new Animation(new KeyframeEffect(dragHandle, dragHandleScaleDownKeyframes, dragHandleScaleDownOptions), document.timeline);
+
+/* Screen- Popout*/
+const screenPopOutStyles = window.getComputedStyle(popOutScreen);
+const screenPopOutKeyframes = [
+  { transform: screenPopOutStyles.getPropertyValue('transform') },
+  { transform: 'scale(1.05)' }
+];
+const screenPopOutOptions = {
+  duration: 500,
+  easing: 'ease',
+  fill: 'forwards'
+};
+const screenPopOutAnimation = new Animation(new KeyframeEffect(popOutScreen, screenPopOutKeyframes, screenPopOutOptions), document.timeline);
+
+/* Screen- Move */
+const screenWidth = window.innerWidth;
+const screenHeight = window.innerHeight;
+const currentRect = popOutScreen.getBoundingClientRect();
+const initialTranslateX = currentRect.left;
+const initialTranslateY = currentRect.top;
+const targetTranslateX = (screenWidth - currentRect.width) / 2;
+const targetTranslateY = (screenHeight - currentRect.height) / 2;
+const screenMoveKeyframes = [
+  { transform: `translate(${initialTranslateX}px, ${initialTranslateY}px)` },
+  { transform: `translate(${targetTranslateX}px, ${targetTranslateY}px)` }
+];
+const screenMoveOptions = {
+  duration: 1000,
+  easing: 'ease',
+  fill: 'forwards'
+};
+const screenMoveAnimation = new Animation(
+  new KeyframeEffect(popOutScreen, screenMoveKeyframes, screenMoveOptions),
+  document.timeline
+);
+// Reverse screen move animation
+function reverseScreenMoveAnimation() {
+  const reverseScreenMoveKeyframes = [
+    { transform: `translate(${targetTranslateX}px, ${targetTranslateY}px)` },
+    { transform: `translate(${initialTranslateX}px, ${initialTranslateY}px)` }
+  ];
+  const reverseScreenMoveAnimation = new Animation(
+    new KeyframeEffect(popOutScreen, reverseScreenMoveKeyframes, screenMoveOptions),
+    document.timeline
+  );
+}
+
+/* Side Menu- Hide */ 
+const sideMenuHideStyles = window.getComputedStyle(sideMenu);
+const sideMenuHideKeyframes = [
+  { transform: sideMenuHideStyles.getPropertyValue('transform') },
+  { transform: 'translate(0)' }
+];
+const sideMenuHideOptions = {
+  duration: 1000,
+  easing: 'ease',
+  fill: 'forwards'
+};
+const sideMenuHideAnimation = new Animation(new KeyframeEffect(sideMenu, sideMenuHideKeyframes, sideMenuHideOptions), document.timeline);
+
+/* Screen- Hide */
+const screenHideAnimation = new Animation(new KeyframeEffect(popOutScreen, sideMenuHideKeyframes, sideMenuHideOptions), document.timeline);
+//#endregion
+//***********************************
+//#region ANIMATION TIMELINES LIST:
+/*  screenPopOutTLine, screenPopInTLine,
+    sMenuAndScreenDisplayTLine (<- with screen) (use sideMenuHideAnimation for just the menu)
+*/
+//#endregion
+//#region Animation Timeline Definitions
+/* Screen- Pop Out/ Make Draggable */
+// Create animation timeline
+const screenPopOutTLine = new AnimationTimeline();
+screenPopOutTLine.append(animation1, animation2);
+
+/* Screen- Pop In/ Return to Side Menu */
+const screenPopInTLine = new AnimationTimeline();
+screenPopInTLine.append(animation1, animation2);
+
+/* Side Menu & Screen- Display */ 
+const sMenuDisplayTLine1 = new AnimationTimeline();
+sMenuDisplayTLine1.append(animation1, animation2);
+
+//#endregion
+//***************************************************************************
+
+//#region Select Menu/ Content Injection Functions
 /*function populateSelectCategories() {// boilerplate. needs to be fleshed out
   fetch('categories.json') // Replace with your actual JSON file path
     .then(response => response.json())
@@ -206,7 +328,9 @@ function handleSelectMenuClick(event, menus) {
 
   orchestrateSelection();
 }
+//#endregion
 
+//#region Misc Hide/Display
 /* ## Side Menu Open/Close  ## */
 function handleSideMenuDisplay() {
   function toggleDisplay(transformValue) {
@@ -238,14 +362,19 @@ function handlePlaybackControlsDisplay() {
     toggleDisplay("0px");
   }
 }
+//#endregion
 
+//#region Screen Dragging
 /* ##  Handle Screen Draggability/ Pop Out  ## */
 function handleScreenDraggability() {
   let originalLeft, originalTop;
   screenDraggable = false;
+  let poppedOut = true; //set true before popout, false before popin
+  let readyPopin = false; //controls animation listeners for popin
 
   /* ##  Pop Out Screen  ## */ //make screen draggable
   function paramScreenPopOut() {
+    poppedOut = false;
     originalLeft = popOutScreen.getBoundingClientRect().left;
     originalTop = popOutScreen.getBoundingClientRect().top;
     dragHandle.classList.add("slid-out"); //animates the revealing of drag handle w/ keyframes css
@@ -275,37 +404,38 @@ function handleScreenDraggability() {
     const deltaX = originalLeft - currentLeft;
     const deltaY = originalTop - currentTop;
     popOutScreen.style.transform = `translate(${deltaX}px, ${deltaY}px)`;
+    readyPopin = true;
   }
 
   function paramScreenPopIn() {
     popOutScreen.classList.add("popped-in-screen"); //animates scaling down to simulate popping into side menu
     popOutScreen.classList.remove("popped-out-screen");
-    screenDraggable = false;
     dragHandle.removeEventListener("animationend", handleAnimation);
     popOutScreen.removeEventListener("transitionend", handleAnimation); //removes these until next function call
     screenDraggable = false;
+    readyPopin = false;
   }
 
+  dragHandle.addEventListener("animationend", handleAnimation);
+  popOutScreen.addEventListener("transitionend", handleAnimation);
   function handleAnimation(event) {
     // Check if the specific animation you're interested in has ended
     if (event.animationName && event.animationName === "slide-in") {
       console.log("slide-in animation ended, event triggered");
       paramScreenMove(); // waits until popoutscreen's dragHandle is put away to move back home in case the child elem affects positioning.
-    } else if (event.propertyName === "transform" && screenDraggable) {
+    } else if (event.propertyName === "transform" && readyPopin ) {
       console.log("screenmove transition ended, event triggered");
       paramScreenPopIn(); //waits until the screen is back in home position until simulating pop into side menu
-    } else if (event.propertyName === "transform" && !screenDraggable) {
-      console.log("screen scale transition ended, event triggered");
-      screenDraggable = true; // waits until the popout animation s over before allowing drag
     }
   }
 
   if (!screenDraggable) {
+    poppedOut = true;
     paramScreenPopOut();
     handleSideMenuDisplay();
   } else {
-    dragHandle.addEventListener("animationend", handleAnimation);
-    popOutScreen.addEventListener("transitionend", handleAnimation); //removes these until next function call
+    poppedOut = false;
+     //removes these until next function call
     if (!sideMenuOpen) {
       handleSideMenuDisplay();
     }
@@ -347,8 +477,9 @@ function handleScreenDrag() {
     }
   }
 }
+//#endregion
 
-/* ##  Event Listeners/ Setup Function Calls  ##  */
+/* ## Global Event Listeners/ On-Load Setup  ##  */
 document.addEventListener("DOMContentLoaded", () => {
   /* ##  Event Listener Variables  ## */
   const SMHamburgerButton = document.querySelector("#hamburger-menu");
