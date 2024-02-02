@@ -1,4 +1,4 @@
-/* Define CSS variables */
+/* Define standardized CSS variables */
 :root {
     --theme-color: blue;
     --theme-transp-color: rgba(0, 0, 255, 0.3);
@@ -17,9 +17,9 @@
     --font-size-p: 0.9rem;
     --font-size-a: 0.9rem;
     --font-size-afterthought: 0.8rem;
-    --font-weight-0: 200;
-    --font-weight-1: 500;
-    --font-weight-2: 700;
+    --font-weight-light: 200;
+    --font-weight-normal: 500;
+    --font-weight-bold: 700;
 }
 
 /* Global styles */
@@ -33,7 +33,7 @@
 html {
     font-family: var(--font-family);
     font-size: 13px;
-    font-weight: var(--font-weight-1);
+    font-weight: var(--font-weight-normal);
 }
 
 body {
@@ -85,7 +85,7 @@ header a img {
 
 .afterthought {
     font-size: var(--font-size-afterthought);
-    font-weight: var(--font-weight-0);
+    font-weight: var(--font-weight-light);
     text-align: center;
 }
 

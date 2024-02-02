@@ -29,7 +29,20 @@
 /*░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░*/
 /*¯\_(ツ)_/¯ ████████▓▓▓▓▓▒▒▒Copyright ©️ 2024 Code-Nit-Whit.▒▒▒▓▓▓▓▓▓████████ t(- n -)t*/
 
-/* ##  Select Menu/ Content Injection Code ## */
+/* ##  Global Variables ## */
+const sideMenu = document.querySelector("aside");
+const popOutScreen = document.getElementById("param-screen-container");
+const playbackControls = document.getElementById("controls-container");
+const dragHandle = document.getElementById("draggable-handle");
+const dragHandleArrow = document.getElementById("popout-arrow");
+const dragTexture = document.querySelector("#drag-texture");
+
+let sideMenuOpen = true; //Side Menu
+let controlsOpen = false; //Playback Controls
+let dragging = false; //Drag Handle -> Popout Screen
+let screenDraggable = false; //Drag Handle Arrow -> Popout Screen, also used in side menu toggle funciton
+
+/* ##  Select Menu/ Content Injection Functions ## */
 
 /*function populateSelectCategories() {// boilerplate. needs to be fleshed out
   fetch('categories.json') // Replace with your actual JSON file path
@@ -50,11 +63,12 @@
     });
 }*/
 
-/*function handleSelectMenuClick(event, menus) {
+function handleSelectMenuClick(event, menus) {
   const clicked = event.target;
   const parent = clicked.parentElement;
   let selectMenu;
 
+  /* ##  Logic for handling select menu clisk and current selection  ## */
   //fix 1st option selection bug
   //add home page option here? or in the header?
   //add functionality for overlay
@@ -109,102 +123,253 @@
         //clickWrapper.style.display='block';
       }
     }
-  }*/
+  }
 
-//This function is not ready, it's boilerplate code.
-/*function populateAnimationList() {
-    const selectCategory = document.getElementById("category-select");
-    const selectItems = document.getElementById("item-select");
-    const selectedCategory = this.value; // Get the selected category
+  //This function is not ready, it's boilerplate code.
+  /* ## Animation Select Menu Population  ## */
+  /*function populateAnimationList() {
+      const selectCategory = document.getElementById("category-select");
+      const selectItems = document.getElementById("item-select");
+      const selectedCategory = this.value; // Get the selected category
 
-    // Clear the second select menu before populating with new items
-    selectItems.innerHTML = "";
+      // Clear the second select menu before populating with new items
+      selectItems.innerHTML = "";
 
-    // Access the corresponding list of items based on the selected category
-    const itemsList = data[selectedCategory].items;
+      // Access the corresponding list of items based on the selected category
+      const itemsList = data[selectedCategory].items;
 
-    // Loop through each item and populate the second select menu
-    for (const item of itemsList) {
-      const newOption = document.createElement("option");
-      newOption.textContent = item.label;
-      newOption.value = item.value;
-      selectItems.appendChild(newOption);
-    }
-  }*/
-
-//boilerplate code. Needs to be refactored
-/*async function handleGistContent() {
-    // Replace "temp-content.json" with your desired filename
-    const tempJsonFile = "session.json";
-
-    //boilerplate code. Needs to be refactored
-    /*async function saveToTempJson(contentObject) {
-      const stringifiedContent = JSON.stringify(contentObject);
-      try {
-        await fetch(tempJsonFile, {
-          method: "PUT",
-          body: stringifiedContent,
-          headers: {
-            "Content-Type": "application/json",
-          },
-        });
-      } catch (error) {
-        console.error("Error saving content to JSON:", error);
+      // Loop through each item and populate the second select menu
+      for (const item of itemsList) {
+        const newOption = document.createElement("option");
+        newOption.textContent = item.label;
+        newOption.value = item.value;
+        selectItems.appendChild(newOption);
       }
     }*/
 
-//boilerplate code. Needs to be refactored
-/*async function populateAndInjectContent(gistContent) {
-      if (!gistContent) return; // Check for null content
+  //boilerplate code. Needs to be refactored
+  /* ##  Gist Content/ Injection Management Functions ## */
+  /*async function handleGistContent() {
+          // Replace "temp-content.json" with your desired filename
+          const tempJsonFile = "session.json";
 
-      // Parse JSON content into object
-      const contentObject = JSON.parse(gistContent);
+          //boilerplate code. Needs to be refactored
+          async function saveToTempJson(contentObject) {
+            const stringifiedContent = JSON.stringify(contentObject);
+            try {
+              await fetch(tempJsonFile, {
+                method: "PUT",
+                body: stringifiedContent,
+                headers: {
+                  "Content-Type": "application/json",
+                },
+              });
+            } catch (error) {
+              console.error("Error saving content to JSON:", error);
+            }
+          }
 
-      // Access specific properties from the object for injection (e.g., HTML, CSS)
-      const htmlContent = contentObject.html;
-      const cssContent = contentObject.css;
+    //boilerplate code. Needs to be refactored
+    async function populateAndInjectContent(gistContent) {
+            if (!gistContent) return; // Check for null content
 
-      // Select target element(s) in your HTML where to inject content
-      const contentContainer = document.getElementById("content-container");
-      const styleElement = document.getElementById("style-element");
+            // Parse JSON content into object
+            const contentObject = JSON.parse(gistContent);
 
-      // Inject HTML content
-      contentContainer.innerHTML = htmlContent;
+            // Access specific properties from the object for injection (e.g., HTML, CSS)
+            const htmlContent = contentObject.html;
+            const cssContent = contentObject.css;
 
-      // Inject CSS content (assuming you have a style element)
-      styleElement.textContent = cssContent;
-    }*/
+            // Select target element(s) in your HTML where to inject content
+            const contentContainer = document.getElementById("content-container");
+            const styleElement = document.getElementById("style-element");
 
-//boilerplate code. Needs to be refactored
-/*try {
-      const response = await fetch(gistUrl);
-      const data = await response.json();
-      populateAndInjectContent();
-      saveToTempJson();
-      return data.files["content.json"].content; // Assuming content is in "content.json" file
-    } catch (error) {
-      console.error("Error fetching Gist content:", error);
-      // Handle error gracefully (e.g., display message to user)
-      return null;
-    }*/ /*
-  }
+            // Inject HTML content
+            contentContainer.innerHTML = htmlContent;
+
+            // Inject CSS content (assuming you have a style element)
+            styleElement.textContent = cssContent;
+          }*/
+
+  //boilerplate code. Needs to be refactored
+  /*try {
+            const response = await fetch(gistUrl);
+            const data = await response.json();
+            populateAndInjectContent();
+            saveToTempJson();
+            return data.files["content.json"].content; // Assuming content is in "content.json" file
+          } catch (error) {
+            console.error("Error fetching Gist content:", error);
+            // Handle error gracefully (e.g., display message to user)
+            return null;
+          }*/
 
   orchestrateSelection();
-}*/
+}
 
-/* ## Event Listeners ##  */
+/* ## Side Menu Open/Close  ## */
+function handleSideMenuDisplay() {
+  function toggleDisplay(transformValue) {
+    if (!screenDraggable) {
+      popOutScreen.style.transform = `translateX(${transformValue})`;
+    }
+    sideMenu.style.transform = `translateX(${transformValue})`;
+    sideMenuOpen = !sideMenuOpen;
+    console.log('end of side menu display toggle');
+  }
 
+  if (sideMenuOpen) {
+    toggleDisplay("-400px");
+  } else {
+    toggleDisplay("0px");
+  }
+}
+
+/* ##  Playback Controls Open/Close  ## */
+function handlePlaybackControlsDisplay() {
+  function toggleDisplay(transformValue) {
+    playbackControls.style.transform = `translateY(${transformValue})`;
+    controlsOpen = !controlsOpen;
+  }
+
+  if (!controlsOpen) {
+    toggleDisplay("130px");
+  } else {
+    toggleDisplay("0px");
+  }
+}
+
+/* ##  Handle Screen Draggability/ Pop Out  ## */
+function handleScreenDraggability() {
+  let originalLeft, originalTop;
+  screenDraggable = false;
+
+  /* ##  Pop Out Screen  ## */ //make screen draggable
+  function paramScreenPopOut() {
+    originalLeft = popOutScreen.getBoundingClientRect().left;
+    originalTop = popOutScreen.getBoundingClientRect().top;
+    dragHandle.classList.add("slid-out"); //animates the revealing of drag handle w/ keyframes css
+    dragHandle.classList.remove("slid-in");
+    dragHandleArrow.classList.add("popped-out-arrow"); //roates arrow 180 no transition/animation
+    dragHandleArrow.classList.remove("popped-in-arrow");
+    popOutScreen.classList.remove("popped-in-screen");
+    popOutScreen.classList.add("popped-out-screen"); //transitioned scaling up to simulate popping out of side menu
+    handleScreenDrag();
+    screenDraggable = true;
+  }
+
+  /* ##  Close Draggable Handle  ## */ //make screen not draggable
+  function dragHandleClose() {
+    console.log("drag handle close funciton fired");
+    dragHandle.classList.add("slid-in"); //animates the hiding of drag handle w/ keyframes css
+    dragHandle.classList.remove("slid-out");
+    dragHandleArrow.classList.add("popped-in-arrow"); //torates it back- no transition/animation
+    dragHandleArrow.classList.remove("popped-out-arrow");
+  }
+
+  /* ##  Pop In Screen  ## */
+  function paramScreenMove() {
+    //transitoned move back to original position
+    const currentLeft = popOutScreen.getBoundingClientRect().left;
+    const currentTop = popOutScreen.getBoundingClientRect().top;
+    const deltaX = originalLeft - currentLeft;
+    const deltaY = originalTop - currentTop;
+    popOutScreen.style.transform = `translate(${deltaX}px, ${deltaY}px)`;
+  }
+
+  function paramScreenPopIn() {
+    popOutScreen.classList.add("popped-in-screen"); //animates scaling down to simulate popping into side menu
+    popOutScreen.classList.remove("popped-out-screen");
+    screenDraggable = false;
+    dragHandle.removeEventListener("animationend", handleAnimation);
+    popOutScreen.removeEventListener("transitionend", handleAnimation); //removes these until next function call
+    screenDraggable = false;
+  }
+
+  function handleAnimation(event) {
+    // Check if the specific animation you're interested in has ended
+    if (event.animationName && event.animationName === "slide-in") {
+      console.log("slide-in animation ended, event triggered");
+      paramScreenMove(); // waits until popoutscreen's dragHandle is put away to move back home in case the child elem affects positioning.
+    } else if (event.propertyName === "transform" && screenDraggable) {
+      console.log("screenmove transition ended, event triggered");
+      paramScreenPopIn(); //waits until the screen is back in home position until simulating pop into side menu
+    } else if (event.propertyName === "transform" && !screenDraggable) {
+      console.log("screen scale transition ended, event triggered");
+      screenDraggable = true; // waits until the popout animation s over before allowing drag
+    }
+  }
+
+  if (!screenDraggable) {
+    paramScreenPopOut();
+    handleSideMenuDisplay();
+  } else {
+    dragHandle.addEventListener("animationend", handleAnimation);
+    popOutScreen.addEventListener("transitionend", handleAnimation); //removes these until next function call
+    if (!sideMenuOpen) {
+      handleSideMenuDisplay();
+    }
+    console.trace();
+    dragHandleClose();
+    console.log("got to end of conditional without triggering closing draghanddle?");
+  }
+}
+
+/* ##  Handle Dragged Popout Screen Position  ## */
+function handleScreenDrag() {
+  dragTexture.addEventListener("pointerdown", dragStart);
+
+  let initialX, initialY;
+
+  function dragStart(event) {
+    if (screenDraggable) {
+      dragging = true;
+      initialX = event.clientX - popOutScreen.offsetLeft;
+      initialY = event.clientY - popOutScreen.offsetTop;
+      document.addEventListener("pointermove", drag);
+      document.addEventListener("pointerup", dragEnd);
+    }
+  }
+
+  function dragEnd() {
+    dragging = false;
+    document.removeEventListener("pointermove", drag);
+    document.removeEventListener("pointerup", dragEnd);
+  }
+
+  function drag(event) {
+    if (dragging && screenDraggable) {
+      const deltaX = event.clientX - initialX;
+      const deltaY = event.clientY - initialY;
+      // Update the position of the handle
+      popOutScreen.style.left = `${deltaX}px`;
+      popOutScreen.style.top = `${deltaY}px`;
+    }
+  }
+}
+
+/* ##  Event Listeners/ Setup Function Calls  ##  */
 document.addEventListener("DOMContentLoaded", () => {
+  /* ##  Event Listener Variables  ## */
+  const SMHamburgerButton = document.querySelector("#hamburger-menu");
+  const SMCollapseButton = document.querySelector("#collapse-button");
+  const playbackControlsToggle = document.getElementById("controls-slide-tab");
+  const mainBody = document.getElementById("body-container");
+  const header = document.querySelector("header");
+
+  /* ##  Setup Function Calls  ## */
   //populateSelectCategories();
-  /* const menus = document.querySelectorAll(".select-menu");
+
+  /* ##  Event Listeners to be converted  ## */
+  /*const menus = document.querySelectorAll(".select-menu");
   menus.forEach((menu) => {
     menu.addEventListener("click", (event) => {
       event.stopPropagation();
       handleSelectMenuClick(event, menus);
     });
-  });*/
+  });
 
-  /*const checkBoxes = document.querySelectorAll(".toggle-checkbox");
+  const checkBoxes = document.querySelectorAll(".toggle-checkbox");
   checkBoxes.forEach((checkbox) => { //boilerplate code. Needs to be refactored
       checkbox.addEventListener('click',(event) => {
           event.stopPropagation();
@@ -231,154 +396,27 @@ document.addEventListener("DOMContentLoaded", () => {
       });
   });*/
 
-  /* Hamburger and elipses side menu buttons */
-  const HBButton = document.querySelector("#hamburger-menu");
-  let open = true;
-  let poppedOut = false;
-  const sideMenu = document.querySelector("aside");
-  const popOutScreen = document.getElementById("param-screen-container");
-  HBButton.addEventListener("click", (event) => {
-    event.stopPropagation();
-    if (open && !poppedOut) {
-      sideMenu.style.transform = "translateX(-400px)";
-      popOutScreen.style.transform = "translateX(-400px)";
-      open = false;
-    } else if (open && poppedOut) {
-      sideMenu.style.transform = "translateX(-400px)";
-      open = false;
-    } else if (!open && poppedOut) {
-      sideMenu.style.transform = "translateX(0)";
-      open = true;
-    } else if (!open && !poppedOut) {
-      sideMenu.style.transform = "translateX(0)";
-      popOutScreen.style.transform = "translateX(0)";
-      open = true;
+  /* ##  Header Click Events  ## */
+  header.addEventListener("click", (event) => {
+    if (event.target === SMHamburgerButton) {
+      handleSideMenuDisplay();
     }
   });
 
-  const collapser = document.querySelector("#collapse-button");
-  collapser.addEventListener("click", (event) => {
-    event.stopPropagation();
-    if (!poppedOut) {
-      popOutScreen.style.transform = "translateX(-400px)";
-    }
-    sideMenu.style.transform = "translateX(-400px)";
-    open = false;
-  });
-
-  const controls = document.getElementById("controls-container");
-  const controlsTab = document.getElementById("controls-slide-tab");
-  let panelControlPanlOpen = false;
-  controlsTab.addEventListener("click", () => {
-    event.stopPropagation();
-    if (panelControlPanlOpen) {
-      popOutScreen.style.height = "250px";
-      setTimeout(() => {
-        controls.style.transform = "translateY(0px)";
-      }, 1000);
-      panelControlPanlOpen = false;
+  /* ##  Main Body Click Events  ## */
+  mainBody.addEventListener("click", (event) => {
+    console.log(event.target);
+    /* ##  Hamburder Icon Button/ Ellipses Button  ## */
+    if (event.target === SMCollapseButton) {
+      handleSideMenuDisplay();
+      /* ##  Playback Controls Handle Thingy  ## */
+    } else if (event.target === playbackControlsToggle) {
+      handlePlaybackControlsDisplay();
+      /* ##  Popout Arrow, toggle draggability ## */
+    } else if (event.target === dragHandleArrow) {
+      handleScreenDraggability();
     } else {
-      controls.style.transform = "translateY(130px)";
-      controlsTab.style.transform = "translateY(10px)";
-      setTimeout(() => {
-        popOutScreen.style.height = "120px";
-      }, 1000);
-      panelControlPanlOpen = true;
+      return;
     }
-  });
-
-  /* Pop-out screen */
-  const dragHandle = document.getElementById("draggable-handle");
-  const popArrow = document.getElementById("popout-arrow");
-
-  dragHandle.addEventListener("click", () => {
-    event.stopPropagation();
-    if (!dragHandle.classList.contains("slid-out") && !poppedOut) {
-      const originalLeft = popOutScreen.getBoundingClientRect().left;
-      const originalTop = popOutScreen.getBoundingClientRect().top;
-      dragHandle.classList.add("slid-out");
-      dragHandle.classList.remove("slid-in");
-      popOutScreen.classList.remove("popped-in-screen");
-      popOutScreen.classList.add("popped-out-screen");
-      popArrow.classList.add("popped-out-arrow");
-      popArrow.classList.remove("popped-in-arrow");
-      poppedOut = true;
-      setTimeout(() => {
-        sideMenu.style.transform = "translateX(-400px)";
-        open = false;
-      }, 2000);
-      const arrow = document.getElementById("popout-arrow");
-      arrow.addEventListener("click", () => {
-        event.stopPropagation();
-        const currentLeft = popOutScreen.getBoundingClientRect().left;
-        const currentTop = popOutScreen.getBoundingClientRect().top;
-        // Calculate difference between current and original position
-        const deltaX = originalLeft - currentLeft;
-        const deltaY = originalTop - currentTop;
-        poppedOut = false;
-        sideMenu.style.transform = "translateX(0)";
-        open = true;
-        dragHandle.classList.add("slid-in");
-        dragHandle.classList.remove("slid-out");
-        setTimeout(() => {
-          popOutScreen.style.transform = `translate(${deltaX}px, ${deltaY}px)`;
-        }, 3000);
-        setTimeout(() => {
-          popOutScreen.classList.remove("popped-out-screen");
-          popOutScreen.classList.add("popped-in-screen");
-          popArrow.classList.add("popped-in-arrow");
-          popArrow.classList.remove("popped-out-arrow");
-        }, 4500);
-      });
-    }
-  });
-
-  let dragging = false;
-  let initialX, initialY;
-  let previousX, previousY;
-
-  dragHandle.addEventListener("mousedown", (event) => {
-    event.stopPropagation();
-    if (poppedOut) {
-      dragging = true;
-      // Adjust the initial position calculation to account for any offset
-      initialX = event.clientX;
-      initialY = event.clientY;
-      previousX = initialX;
-      previousY = initialY;
-    }
-  });
-  document.addEventListener("mousemove", (event) => {
-    event.stopPropagation();
-    if (dragging) {
-      const currentX = event.clientX;
-      const currentY = event.clientY;
-      const deltaX = currentX - previousX;
-      const deltaY = currentY - previousY;
-
-      // Calculate the new position of the handle
-      let newX = popOutScreen.offsetLeft + deltaX;
-      let newY = popOutScreen.offsetTop + deltaY;
-
-      // Restrict movement within the visible area of the screen
-      const maxWidth = window.innerWidth - popOutScreen.offsetWidth;
-      const maxHeight = window.innerHeight - popOutScreen.offsetHeight;
-
-      newX = Math.max(0, Math.min(newX, maxWidth));
-      newY = Math.max(0, Math.min(newY, maxHeight));
-
-      // Update the position of the handle
-      popOutScreen.style.left = `${newX}px`;
-      popOutScreen.style.top = `${newY}px`;
-
-      // Update the previous cursor position
-      previousX = currentX;
-      previousY = currentY;
-    }
-  });
-
-  document.addEventListener("mouseup", () => {
-    event.stopPropagation();
-    dragging = false;
   });
 });
