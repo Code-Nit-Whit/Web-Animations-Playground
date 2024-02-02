@@ -1,18 +1,15 @@
 *
-Assets\Misc SVGs\blue-www.svg 
 
 !LICENSE
 !README.md
 !FileDirectory.md
 
-!V1_Keypad-Only
-!V1_Keypad-Only/**/*
-
 !Assets
 !Assets/Brand-Icons
 !Assets/Brand-Icons/**
-!Assets/Misc-SVGs
-!Assets/Misc-SVGs/**
+!Assets/Misc-SVGs/custom-arrow.svg
+!Assets/Fonts
+!Assets/Fonts/** 
 
 !src
 !src/**
