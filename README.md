@@ -37,7 +37,7 @@ Welcome to my evolving playground for exploring the world of web animations! Her
 * **Modular Content Injection:** New content is dynamically added, enabling flexible updates and simplified management (including the use of [GitHub Gists](https://gist.github.com/Code-Nit-Whit) for streamlined integration).
 * **Web Animations API:** Both the main website animations and the controls for the injected animations are implemented using the [Web Animations API](https://developer.mozilla.org/en-US/docs/Web/API/Web_Animations_API/Using_the_Web_Animations_API#meet_the_web_animations_api)
 
-<h3><span>&#128279;</span><a href="https://github.com/Code-Nit-Whit/FileDirectory.md"><strong>File Directory</strong></a></h3>
+<h3><span>&#128279;</span><a href="https://github.com/Code-Nit-Whit/Web-Animations/FileDirectory.md"><strong>File Directory</strong></a></h3>
 
 ## **Future Development:**
 
