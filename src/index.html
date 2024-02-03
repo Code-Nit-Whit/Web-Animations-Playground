@@ -4,31 +4,40 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="Content-Security-Policy" content="script-src 'self' 'unsafe-inline' https://cpwebassets.codepen.io/">
-    <title>Web Animations: Method and Medium</title>
+    <title>Web Animation Playground</title>
+    <meta http-equiv="Content-Security-Policy"content="script-src 'self' 'unsafe-inline' https://cpwebassets.codepen.io/">
+    <!--<meta http-equiv="X-XSS-Protection" content="1; mode=block">-->
+    <meta name="description" content="...">
+    <meta name="keywords" content="...">
+    <meta name="robots" content="...">
+    <!--<link rel="shortcut icon" href="favicon.ico">-->
     <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="animations.css">
+    <!--<link rel="preload" href="critical.js">-->
+    <!--<link rel="dns-prefetch" href="//fonts.googleapis.com">-->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link
-        href="https://fonts.googleapis.com/css2?family=Noto+Sans+Symbols+2&family=Roboto+Mono:ital,wght@0,100..700;1,100..700&display=swap"
-        rel="stylesheet">
-    <style>
-
-    </style>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Symbols+2&family=Roboto+Mono:ital,wght@0,100..700;1,100..700&display=swap" rel="stylesheet">
+    <!--<meta property="og:title" content="...">-->
+    <!--<meta property="twitter:title" content="...">-->
+    <!--<link rel="alternate" media="print" href="print.css">-->
+    <!--<base href="...">-->
+    <style></style>
+    <noscript></noscript>
 </head>
 
 <body>
     <header>
         <nav id="top-navbar">
             <button id="hamburger-menu">☰</button>
-            <h1>Web Animations: <span id="method">[Method]</span> and <span id="medium">[Medium]</span></h1>
+            <h1>Web Animations: <span id="animation-name">[Animation Name]</span></h1>
         </nav>
     </header>
 
     <div id="body-container">
         <aside id="side-menu" class="select-parent">
             <div id="preference-select-container">
-                <div id="select-row-1" class="select-menu">
+                <div id="select-row-1" class="select-menu select-menu-enabled">
                     <span class="current-selection">Category</span>
                     <img class="custom-arrow" type="image/svg+xml" src="../Assets/Misc SVGs/custom-arrow.svg"
                         alt="&#x25BC;">
@@ -39,7 +48,7 @@
                     </ul>
                 </div>
                 <div id="select-row-2" class="flex-row">
-                    <div id="animation-select" class="select-menu-disabled">
+                    <div id="animation-select" class="select-menu select-menu-disabled">
                         <span class="current-selection">Animation</span>
                         <img class="custom-arrow" type="image/svg+xml" src="../Assets/Misc SVGs/custom-arrow.svg"
                             alt="&#x25BC;">
@@ -53,21 +62,52 @@
                 </div>
                 <div id="preferences" class="preferences-grid">
                     <div class="toggle-grid-container">
-                        <label class="toggle-label" for="auto-play-toggle">Autoplay:</label>
-                        <input class="toggle-checkbox" id="auto-play-toggle" type="checkbox" checked></input>
-                    </div>
-                    <div class="toggle-grid-container">
-                        <label class="toggle-label" for="loop-toggle">Loop:</label>
-                        <input class="toggle-checkbox" id="loop-toggle" type="checkbox" checked></input>
-                    </div>
-                    <div class="toggle-grid-container">
-                        <label class="toggle-label" for="s-screen-toggle">Split Screen:</label>
-                        <input class="toggle-checkbox" id="s-screen-toggle" type="checkbox"></input>
+                        <label class="toggle-label" for="source-code-toggle">Source Code:</label>
+                        <input class="toggle-checkbox" id="source-code-toggle" type="checkbox"></input>
                     </div>
                     <div class="toggle-grid-container">
                         <label class="toggle-label" for="codepen-toggle">CodePen Editor:</label>
                         <input class="toggle-checkbox" id="codepen-toggle" type="checkbox"></input>
                     </div>
+                    <div class="toggle-grid-container">
+                        <label class="toggle-label" for="auto-play-toggle">Autoplay:</label>
+                        <input class="toggle-checkbox" id="auto-play-toggle" type="checkbox"></input>
+                    </div>
+                    <div class="toggle-grid-container">
+                        <label class="toggle-label" for="reverse-toggle">Reverse:</label>
+                        <input class="toggle-checkbox" id="seek-reverse-buttone="checkbox"></input>
+                    </div>
+                    <div class="toggle-grid-container">
+                        <label class="toggle-label" for="single-mode-toggle">Timeline Mode:</label>
+                        <input class="toggle-checkbox" id="single-loop-toggle" type="checkbox" checked></input>
+                    </div>
+                    <div id="single-select" class="select-menu select-menu-disabled">
+                        <span class="current-selection">Anim. Object</span>
+                        <img class="custom-arrow" type="image/svg+xml" src="../Assets/Misc SVGs/custom-arrow.svg"
+                            alt="&#x25BC;">
+                        <ul class="options-list">
+                            <li class="select-option">Anim Object 1</li>
+                            <li class="select-option">Anim Object 2</li>
+                            <li class="select-option">Anim Object 3</li>
+                        </ul>
+                    </div>
+                    <div class="toggle-grid-container">
+                        <label class="toggle-label" for="timeline-loop-toggle">Loop Timeline:</label>
+                        <input class="toggle-checkbox" id="timeline-loop-toggle" type="checkbox"></input>
+                    </div>
+                    <div class="toggle-grid-container">
+                        <label class="toggle-label" for="animation-loop-toggle">Loop Animation:</label>
+                        <input class="toggle-checkbox" id="animation-loop-toggle" type="checkbox"></input>
+                    </div>
+                    <div class="toggle-grid-container">
+                        <label class="toggle-label" for="timeline-loop-count">Iterations:</label>
+                        <input class="toggle-checkbox" id="timeline-loop-count" type="number" min="0" max="10"></input>
+                    </div>
+                    <div class="toggle-grid-container">
+                        <label class="toggle-label" for="animation-loop-count">Iterations:</label>
+                        <input class="toggle-checkbox" id="animation-loop-count" type="number" min="0" max="10"></input>
+                    </div>
+                    
                 </div>
             </div>
 
@@ -171,7 +211,7 @@
     </footer>
 
     <script src="maestro.js"></script>
-
+    <script src="anime-puppeteer.js"></script>
 </body>
 
 </html>

@@ -1,3 +1,6 @@
+/*  Ctrl + K + 0 To Fold all regions,
+    Ctrl + K + 9 To Unfold all regions  (VS Code)*/
+
 //#region Header Comment
 //  ╔═══╗     ╔╗        ╔╗          ╔╗             ╔═══╗        ╔╗
 //  ║╔═╗║    ╔╝╚╗       ║║         ╔╝╚╗            ║╔══╝       ╔╝╚╗
@@ -165,7 +168,7 @@ sMenuDisplayTLine1.append(animation1, animation2);
 //#endregion
 //***************************************************************************
 
-//#region Select Menu/ Content Injection Functions
+//#region Select Menu/Content Injection Functions
 /*function populateSelectCategories() {// boilerplate. needs to be fleshed out
   fetch('categories.json') // Replace with your actual JSON file path
     .then(response => response.json())
