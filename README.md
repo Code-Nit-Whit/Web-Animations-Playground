@@ -1,6 +1,6 @@
 
 
-#  Web Animations: Exploring the Craft with Code 
+#  Web Animations Playground: Exploring coded animations with a GUI
 
 ![GitHub License](https://img.shields.io/github/license/Code-Nit-Whit/Web-Animations)
 <br><br>
@@ -21,7 +21,9 @@
 
 ## **Overview**
 
-Welcome to my evolving playground for exploring the world of web animations! Here, you'll find a growing collection I've built myself using vanilla JavaScript, CSS, the Web Animations API, and the occassional animation library. Each animation reflects my journey in mastering these technologies and crafting interactive experiences.
+Welcome to my evolving playground for exploring the world of web animations! Here, you'll find a single page web application built that isn't built on the back of a framework or any libraries. This project will house a growing collection of my own web animations made using a variety of methods. Each animation reflects my journey in mastering these technologies and crafting interactive experiences. 
+
+The web application will allow for the manual control of each animation using graphical elements, making it especially helpful for understanding and fine tuning the different elements and attributes behind them. I plan to continually expand the application's abilities to control, manipulate, and even alter imported animations, hopefully allowing it to become an educaitonal resource or  even a code-free animation web animation studio of sorts in the future. I look forward to makign this capable of handling a diverse set of user-imported animations, making it a valueable tool for for those inclined.
 
 **Key Features:**
 
@@ -37,7 +39,7 @@ Welcome to my evolving playground for exploring the world of web animations! Her
 * **Modular Content Injection:** New content is dynamically added, enabling flexible updates and simplified management (including the use of [GitHub Gists](https://gist.github.com/Code-Nit-Whit) for streamlined integration).
 * **Web Animations API:** Both the main website animations and the controls for the injected animations are implemented using the [Web Animations API](https://developer.mozilla.org/en-US/docs/Web/API/Web_Animations_API/Using_the_Web_Animations_API#meet_the_web_animations_api)
 
-<h3><span>&#128279;</span><a href="https://github.com/Code-Nit-Whit/Web-Animations/blob/main/FileDirectory.md"><strong>File Directory</strong></a></h3>
+<h3><span>&#128279;</span><a href="https://github.com/Code-Nit-Whit/Web-Animations-Playground/blob/main/FileDirectory.md"><strong>File Directory</strong></a></h3>
 
 ## **Future Development:**
 
