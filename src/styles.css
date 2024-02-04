@@ -321,7 +321,7 @@ body .options-list {
     top: 47%;
     width: 330PX;
     height: 250px;
-    display: none;
+    display: flex;
     flex-direction: column;
     margin-bottom:10px;
     z-index: 100;
@@ -429,7 +429,6 @@ body .options-list {
     padding: 0;
     margin: 0 auto;
     margin-top:-155px;
-    transition: transform 1s;
 }
 
 #controls-overlay {
@@ -458,7 +457,8 @@ body .options-list {
     cursor:pointer;
 }
 
-#controls-slide-tab:hover {
+#controls-slide-tab:hover,
+#draggable-handle:hover {
     transform:scale(1.1);
 }
 
