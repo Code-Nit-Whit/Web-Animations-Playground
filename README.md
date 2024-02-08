@@ -21,32 +21,31 @@
 
 ## **Overview**
 
-Welcome to my evolving playground for exploring the world of web animations! Here, you'll find a single page web application built that isn't built on the back of a framework or any libraries. This project will house a growing collection of my own web animations made using a variety of methods. Each animation reflects my journey in mastering these technologies and crafting interactive experiences. 
+Welcome to my evolving playground for exploring the world of web animations! Here, you'll find a single page web application that isn't built on the back of a frameworks or any libraries. This project will house a growing collection of my own web animations and tools for creating our own. This project reflects my journey in mastering animation technologies and crafting interactive experiences with web development. 
 
-The web application will allow for the manual control of each animation using graphical elements, making it especially helpful for understanding and fine tuning the different elements and attributes behind them. I plan to continually expand the application's abilities to control, manipulate, and even alter imported animations, hopefully allowing it to become an educaitonal resource or  even a code-free animation web animation studio of sorts in the future. I look forward to makign this capable of handling a diverse set of user-imported animations, making it a valueable tool for for those inclined.
+The web application will allow for the manual control of sample animations using graphical elements, making it especially helpful for understanding and fine tuning the parameters they're built on. I plan to continually expand the application's abilities to create, edit, and even graphically generate animations, hopefully allowing it to become an cornerstone educational resource and a comprehensive animation generation tool. I look forward to making this capable of handling a diverse set of libraries and offering a multitude of graphical interface controls, making it a valueable tool for beginners and more experienced developers, alike.
 
 **Key Features:**
 
-* **Diverse Animation Gallery:** From subtle transitions to expressive character movements, the gallery showcases a range of styles and problem-solving approaches.
-* **Interactive Controls:** Dive deeper into the animations with intuitive controls for playback, rewind, skipping, and speed adjustment. Loop individual animations or entire sequences.
-* **Code Exploration:** Uncover the intricacies of each animation with optional, integrated CodePen displays. See how the code works and freely experiment or use these simplified versions of the animations in your own projects. Alternatively, the complete source code for each imported animation is provided in a GitHub Gist embed.
-* **Dynamic Updates:** New animations are seamlessly integrated through content injection, using GitHub Gists like a content managements system. At least that is currently the plan. Controls for imported animations are controlled with graphical elements at the user level. These ccontrols are implementsted using the Web Animations API. 
+* **Diverse Sample Animation Gallery:** From subtle transitions to expressive character movements, the sample gallery showcases a range of styles and problem-solving approaches, all editable.
+* **Built-in Code Editor with Content Rendering** Dive deeper into the animations with intuitive controls for playback, rewind, skipping, and speed adjustment. Loop individual animations or entire sequences.
+* **Playback Controls:** Dive deeper into the editable sample animations with intuitive controls for playback and other adjustments. This feature will not be available for animations created by the user on this site, as of now. 
+* **Export Code to Your Favorite Online Editor:** Showcase your creations with single-click exporting to your favorite online code editor (CodePen, Code Sandbox). Or save it as a GitHub Gist. 
 
 **Technologies Used:**
 
-* **Vanilla JavaScript:** This project focuses on core JavaScript fundamentals for basic interactivity, demonstrating proficiency without relying on external libraries or frameworks for building a single page web application.
-* **CSS:** Most animations come to life through creative and efficient CSS styling techniques. Most of these are then implemented with the Web Animations API for more granular control.
-* **Modular Content Injection:** New content is dynamically added, enabling flexible updates and simplified management (including the use of [GitHub Gists](https://gist.github.com/Code-Nit-Whit) for streamlined integration).
-* **Web Animations API:** Both the main website animations and the controls for the injected animations are implemented using the [Web Animations API](https://developer.mozilla.org/en-US/docs/Web/API/Web_Animations_API/Using_the_Web_Animations_API#meet_the_web_animations_api)
+* **Vanilla JavaScript:** This project focuses on core JavaScript fundamentals for basic interactivity, demonstrating proficiency without relying on external libraries or frameworks for building a single page web application. What is the point in this when using a tool like React could expedite my proect? There really isn't one... except I wanted a challenge.
+* **CSS:** Many demo animations come to life through creative and efficient CSS styling techniques and the use of animation keyframes.
+* **Web Animations API:** Both the web app's internal animations and the controls for the editable sample animations are implemented using the [Web Animations API](https://developer.mozilla.org/en-US/docs/Web/API/Web_Animations_API/Using_the_Web_Animations_API#meet_the_web_animations_api). 
 
 <h3><span>&#128279;</span><a href="https://github.com/Code-Nit-Whit/Web-Animations-Playground/blob/main/FileDirectory.md"><strong>File Directory</strong></a></h3>
 
 ## **Future Development:**
 
-This project is constantly evolving as I expand my coding skills and knowledge. It may eventually transform into a more comprehensive portfolio showcasing diverse development skills and experiences.
+This project is constantly evolving as I expand my coding skills and knowledge. It may eventually transform into a more comprehensive animation generation app, including a variety of animation configurators with code generation and graphical interfaces, along with a wider range of animation libraries compatibility.
 
 <h3><u><strong>Stay Updated</strong></u></h3> 
-<sub><sup><i>Until this portfolio is operational, simplified version of animations and snippets will be on CodePen. </i></sup></sub><br><br>
+<sub><sup><i>Until this application is operational and the website hosted, simplified versions of my individual animations and snippets will be kept on CodePen. Instructional articles  and other written content will be found on my Dev.to account. Some more complicated versions of my CodePen Animation may be found on GitHub Gists.</i></sup></sub><br><br>
 
 
 [![Codepen](https://img.shields.io/badge/Codepen-0a0a0a?style=for-the-badge&logo=codepen&logoColor=white)](https://codepen.io/Code-Nit-Whit) 
@@ -61,5 +60,5 @@ This project is constantly evolving as I expand my coding skills and knowledge. 
 
 <br><br>
 ### Footnotes 
-<sup><sub>* My Dev.to account is currently unused. I will be using this site to elaborate on what I learn in the future</sub></sup><br>
-<sup><sub>** Gists are currently generated from simplified versions hosted on CodePen. Full versions coming soon.</sub></sup>
+<sup><sub>* My Dev.to account is currently empty. I will be migrating old articles from Medium, soon. I also have a couple of articles in the works that should be published soon.</sub></sup><br>
+<sup><sub>** I haven't had the chance to upload the larger versions of the couple of animations that have them, yet. I apreciate your patience as I navigate this project and try to find time to maintain periphory content.</sub></sup>
