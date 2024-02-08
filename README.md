@@ -1,6 +1,6 @@
 
 
-#  Web Animations Playground: Exploring coded animations with a GUI
+#  Web Animations Playground: A tool for animation development and educaiton
 
 ![GitHub License](https://img.shields.io/github/license/Code-Nit-Whit/Web-Animations)
 <br><br>
