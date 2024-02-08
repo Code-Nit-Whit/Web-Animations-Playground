@@ -1,6 +1,6 @@
 
 
-#  Web Animations Playground: A tool for animation development and educaiton
+#  Web Animations Playground: A tool for animation development and education
 
 ![GitHub License](https://img.shields.io/github/license/Code-Nit-Whit/Web-Animations)
 <br><br>
