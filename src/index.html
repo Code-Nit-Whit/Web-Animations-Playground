@@ -1,11 +1,13 @@
+<!-- GRid Layout Generator File
+https://grid.layoutit.com/?id=BV0Lg8y (last imported)
+-->
+<!--Completely redoing layout and design for cleaner/more maintainable css. Utilizing grids instead of flexbox-->
 <!DOCTYPE html>
-<html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Web Animation Playground</title>
-    <meta http-equiv="Content-Security-Policy"content="script-src 'self' 'unsafe-inline' https://cpwebassets.codepen.io/">
+    <title>Web Animation Tools</title>
+    <meta http-equiv="Content-Security-Policy"
+        content="script-src 'self' 'unsafe-inline' https://cpwebassets.codepen.io/">
     <!--<meta http-equiv="X-XSS-Protection" content="1; mode=block">-->
     <meta name="description" content="...">
     <meta name="keywords" content="...">
@@ -14,201 +16,248 @@
     <link rel="stylesheet" href="styles.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Symbols+2&family=Roboto+Mono:ital,wght@0,100..700;1,100..700&display=swap" rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Noto+Sans+Symbols+2&family=Roboto+Mono:ital,wght@0,100..700;1,100..700&display=swap"
+        rel="stylesheet">
     <!--<meta property="og:title" content="...">-->
     <!--<meta property="twitter:title" content="...">-->
     <!--<link rel="alternate" media="print" href="print.css">Use this for documentation printing and hide  the interface-->
     <!--<base href="...">-->
-    <style></style>
+    <style>
+        /* #region Testing Background Animation Styling */
+        /*
+        @import url('https://fonts.googleapis.com/css?family=Exo:400,700');
+
+        * {
+            margin: 0px;
+            padding: 0px;
+        }
+
+        body {
+            font-family: 'Exo', sans-serif;
+        }
+
+        .context {
+            width: 100%;
+            position: absolute;
+            top: 50vh;
+
+        }
+
+        .context h1 {
+            text-align: center;
+            color: #fff;
+            font-size: 50px;
+        }
+
+        .area {
+            background: #000;
+            background: -webkit-linear-gradient(to left, #8f94fb, #4e54c8);
+            width: 100%;
+            height: 100vh;
+
+
+        }
+
+        .circles {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            overflow: hidden;
+        }
+
+        .circles li {
+            position: absolute;
+            display: block;
+            list-style: none;
+            width: 20px;
+            height: 20px;
+            background: rgba(255, 255, 255, 0.2);
+            animation: animate 25s linear infinite;
+            bottom: -150px;
+
+        }
+
+        .circles li:nth-child(1) {
+            left: 25%;
+            width: 80px;
+            height: 80px;
+            animation-delay: 0s;
+        }
+
+
+        .circles li:nth-child(2) {
+            left: 10%;
+            width: 20px;
+            height: 20px;
+            animation-delay: 2s;
+            animation-duration: 12s;
+        }
+
+        .circles li:nth-child(3) {
+            left: 70%;
+            width: 20px;
+            height: 20px;
+            animation-delay: 4s;
+        }
+
+        .circles li:nth-child(4) {
+            left: 40%;
+            width: 60px;
+            height: 60px;
+            animation-delay: 0s;
+            animation-duration: 18s;
+        }
+
+        .circles li:nth-child(5) {
+            left: 65%;
+            width: 20px;
+            height: 20px;
+            animation-delay: 0s;
+        }
+
+        .circles li:nth-child(6) {
+            left: 75%;
+            width: 110px;
+            height: 110px;
+            animation-delay: 3s;
+        }
+
+        .circles li:nth-child(7) {
+            left: 35%;
+            width: 150px;
+            height: 150px;
+            animation-delay: 7s;
+        }
+
+        .circles li:nth-child(8) {
+            left: 50%;
+            width: 25px;
+            height: 25px;
+            animation-delay: 15s;
+            animation-duration: 45s;
+        }
+
+        .circles li:nth-child(9) {
+            left: 20%;
+            width: 15px;
+            height: 15px;
+            animation-delay: 2s;
+            animation-duration: 35s;
+        }
+
+        .circles li:nth-child(10) {
+            left: 85%;
+            width: 150px;
+            height: 150px;
+            animation-delay: 0s;
+            animation-duration: 11s;
+        }
+
+        @keyframes animate {
+            0% {
+                transform: translateY(0) rotate(0deg);
+                opacity: 1;
+                border-radius: 0;
+            }
+            100% {
+                transform: translateY(-1000px) rotate(720deg);
+                opacity: 0;
+                border-radius: 50%;
+            }
+        }
+        */
+        /* #endregion */
+    </style>
     <noscript></noscript>
 </head>
 
 <body>
-    <header>
-        <nav id="top-navbar">
-            <button id="hamburger-menu">☰</button>
-            <h1>Web Animations: <span id="animation-name">[Animation Name]</span></h1>
-        </nav>
-    </header>
-
-    <div id="body-container">
-        <aside id="side-menu" class="select-parent">
-            <div id="preference-select-container">
-                <div id="select-row-1" class="select-menu select-menu-enabled">
-                    <span class="current-selection">Category</span>
-                    <img class="custom-arrow" type="image/svg+xml" src="../Assets/Misc SVGs/custom-arrow.svg"
-                        alt="&#x25BC;">
-                    <ul class="options-list">
-                        <li class="select-option">Placeholder1</li>
-                        <li class="select-option">Placeholder2</li>
-                        <li class="select-option">Placeholder3</li>
-                    </ul>
-                </div>
-                <div id="select-row-2" class="flex-row">
-                    <div id="animation-select" class="select-menu select-menu-disabled">
-                        <span class="current-selection">Animation</span>
-                        <img class="custom-arrow" type="image/svg+xml" src="../Assets/Misc SVGs/custom-arrow.svg"
-                            alt="&#x25BC;">
-                        <ul class="options-list">
-                            <li class="select-option">Placeholder1</li>
-                            <li class="select-option">Placeholder2</li>
-                            <li class="select-option">Placeholder3</li>
-                        </ul>
-                    </div>
-                    <button class="sb-button" id="preferences-button">Reset</button>
-                </div>
-                <div id="preferences" class="preferences-grid">
-                    <div class="toggle-grid-container">
-                        <label class="toggle-label" for="source-code-toggle">Source Code:</label>
-                        <input class="toggle-checkbox" id="source-code-toggle" type="checkbox"></input>
-                    </div>
-                    <div class="toggle-grid-container">
-                        <label class="toggle-label" for="codepen-toggle">CodePen Editor:</label>
-                        <input class="toggle-checkbox" id="codepen-toggle" type="checkbox"></input>
-                    </div>
-                    <div class="toggle-grid-container">
-                        <label class="toggle-label" for="auto-play-toggle">Autoplay:</label>
-                        <input class="toggle-checkbox" id="auto-play-toggle" type="checkbox"></input>
-                    </div>
-                    <div class="toggle-grid-container">
-                        <label class="toggle-label" for="reverse-toggle">Reverse:</label>
-                        <input class="toggle-checkbox" id="seek-reverse-buttone="checkbox"></input>
-                    </div>
-                    <div class="toggle-grid-container">
-                        <label class="toggle-label" for="single-mode-toggle">Timeline Mode:</label>
-                        <input class="toggle-checkbox" id="single-loop-toggle" type="checkbox" checked></input>
-                    </div>
-                    <div id="single-select" class="select-menu select-menu-disabled">
-                        <span class="current-selection">Anim. Object</span>
-                        <img class="custom-arrow" type="image/svg+xml" src="../Assets/Misc SVGs/custom-arrow.svg"
-                            alt="&#x25BC;">
-                        <ul class="options-list">
-                            <li class="select-option">Anim Object 1</li>
-                            <li class="select-option">Anim Object 2</li>
-                            <li class="select-option">Anim Object 3</li>
-                        </ul>
-                    </div>
-                    <div class="toggle-grid-container">
-                        <label class="toggle-label" for="timeline-loop-toggle">Loop Timeline:</label>
-                        <input class="toggle-checkbox" id="timeline-loop-toggle" type="checkbox"></input>
-                    </div>
-                    <div class="toggle-grid-container">
-                        <label class="toggle-label" for="animation-loop-toggle">Loop Animation:</label>
-                        <input class="toggle-checkbox" id="animation-loop-toggle" type="checkbox"></input>
-                    </div>
-                    <div class="toggle-grid-container">
-                        <label class="toggle-label" for="timeline-loop-count">Iterations:</label>
-                        <input class="toggle-checkbox" id="timeline-loop-count" type="number" min="0" max="10"></input>
-                    </div>
-                    <div class="toggle-grid-container">
-                        <label class="toggle-label" for="animation-loop-count">Iterations:</label>
-                        <input class="toggle-checkbox" id="animation-loop-count" type="number" min="0" max="10"></input>
-                    </div>
-                    
-                </div>
-            </div>
-
-            <div id="collapse-button">&#8942;</div>
-        </aside>
-        <div id="param-screen-container" class="popped-in-screen">
-            <div id="drag-centerer-container">
-                <div id="draggable-handle">
-                    <span id="drag-texture">&#x283F;</span>
-                    <div id="popout-arrow" class="popped-in-arrow">&#129170;</div>
-                </div>
-                <div id="param-screen-case">
-                    <div id="param-screen">
-                        <div id="params-row1">
-                            <div></div>
-                        </div>
-                        <div id="params-row2" class="screen-sub-grid">
-                            <div></div>
-                            <div></div>
-                            <div></div>
-                        </div>
-                        <div id="params-row3" class="screen-sub-grid">
-                            <div></div>
-                            <div></div>
-                            <div></div>
-                        </div>
-                    </div><!--End of screen-->
-                </div> <!--End of screen case-->
-            </div>
-            <div id="controls-container">
-                <div id="controls-slide-tab">▼</div>
-                <div id="controls-overlay">
-                    <div id="seek-control-container" class="flex-row slider-container">
-                        <div class="flex-row">
-                            <label for="zoom-control">Zoom</label>
-                            <div id="zoom-value-container"><span class="themed-sb-text"
-                                    id="zoom-control-value">100</span>%
-                            </div>
-                        </div>
-                        <input type="range" min="0" max="100" value="0" class="slider" id="seek-control">
-                    </div>
-                    <div id="playback-buttons">
-                        <button class="sb-control-button sb-symbol sb-button" id="skip-reverse-button">⏮</button>
-                        <button class="sb-control-button sb-symbol sb-button" id="seek-reverse-button">⏪</button>
-                        <button class="sb-control-button sb-symbol sb-button" id="play-pause-button">⏯ </button>
-                        <button class="sb-control-button sb-symbol sb-button" id="stop-button">⏹</button>
-                        <button class="sb-control-button sb-symbol sb-button" id="seek-forward-button">⏩</button>
-                        <button class="sb-control-button sb-symbol sb-button" id="skip-forward-button">⏭</button>
-                    </div>
-                    <div id="speed-control-container" class="flex-row slider-container">
-                        <div class="flex-row">
-                            <label for="speed-control">Speed:</label>
-                            <div><span class="themed-sb-text" id="speed-control-value">100</span>%</div>
-                        </div>
-                        <input type="range" min="1" max="200" value="100" class="slider" id="speed-control">
-                    </div>
-                </div>
-            </div>
-        </div><!--End of screaan container-->
-        <main> <!--this area is what gets replace or edited for individual animations-->
-            <style>
-                /*-------Animation Styling Goes Here-------*/
-            </style>
-            <div id="animation-content">
-                <div id="animation-header">
-                    <h2>[Animation Name]</h2>
-                    <p>[Animation Description]</p>
-                    <h3>*[Instructions]*</h3>
-                </div>
-                <div id="animation-container">
-                    <!-- Animation content goes here -->
-                </div>
-                <div id="animation-footer">
-                    <a href="">[Animation Source/ Repository/ Gist]</a>
-                </div>
-                <div id="animation-divider"></div>
-            </div>
-            <div class="codepen-embed">
-                <h2>CodePen Editor</h2>
-                <p class="afterthought">*The CodePen for this animation may contain a simplified version of the
-                    animation you see above. To see the code to the full animation, click the GitHub Gist checkbox in
-                    the left side menu.</p>
-
-            </div>
-            <!-- <script  id="animation-script">
-                /*--------Animation Script goes here--------*/
-            </script>-->
-        </main>
-    </div><!--End of body container-->
-
-    <footer>
-        <div id="socials-icons">
-            <a href="https://github.com/Code-Nit-Whit/Web-Animations" target="_blank"><img id="github-icon"
-                    src="../Assets/Brand-Icons/github.svg" alt="GitHub"></a>
-            <a id="codepen-icon" href="https://codepen.io/collection/WvPoOR" target="_blank"><img
-                    src="../Assets/Brand-Icons/codepen.svg" alt="CodePen"></a>
-            <a id="dev-icon" href="https://dev.to/code-nit-whit" target="_blank"><img
-                    src="..\Assets\Brand-Icons\dev.svg" alt="Dev"></a>
+    <div class="body-container filled-container">
+        <div class="header">
+            <div id="hamburger-menu" class="main-menu-icon  centered-2-p">☰</div>
+            <h1>Web Animations: <span id="animation-name" class="header-title title">[Animation Name]</span></h1>
         </div>
-        <p>Copyright &copy; 2024 Code-Nit-Whit</p>
-    </footer>
+        <div class="side-menu-tabs centered-2-p frosted-glass">
+            <div class="back-tab center-filledr menu-tab">&#129192;</div>
+            <div class="config-tab center-filled menu-tab">&#9881;&#65039;</div>
+            <div class="playback-tab center-fille menu-tab">&#9654&#9208;</div>
+            <div class="code-editor center-filled menu-tab">&#60;/&#62;</div>
+            <div class="documentation-tab center-filled menu-tab">&#65046;</div>
+        </div>
+        <div class="side-menu centered-2-p">
+            <div class="documentation-panel center-filled glass hidden-panel">
 
-    <script src="maestro.js"></script>
-   <!--<script src="anime-puppeteer.js"></script>-->
+            </div>
+            <div class="code-editor-panel center-filled glass hidden-panel"></div>
+            <div class="playback-panel center-filled glass">
+
+            </div>
+            <div class="config-panel center-filled glass hidden-panel">
+
+            </div>
+        </div>
+        <div class="main-body frosted-glass centered-2-p">
+            <!--Use this for content you want to display to the side of side menu panels-->
+            <!--Need to create shadow dom container for everything else-->
+        </div>
+        <div class="footer frosted-glass">
+            <div class="social-media-icons">
+                <img class="dev-to-icon social-icon" src="../Assets/Brand-Icons/dev.svg" alt="Dev.to"
+                    onclick="window.open('https://dev.to/code-nit-whit', '_blank');">
+                <img class="codepen-icon social-icon" src="../Assets/Brand-Icons/codepen.svg" alt="GitHub"
+                    onclick="window.open('https://github.com/Code-nit-Whit/', '_blank');">
+                <img class="github-icon" src="../Assets/Brand-Icons/github.svg" alt="GitHub"
+                    onclick="window.open('https://github.com/Code-nit-Whit/', '_blank');">
+            </div>
+            <div class="copyright">Copyright &copy; 2024 Code-Nit-Whit</div>
+        </div>
+    </div>
 </body>
 
-</html>
+
+<!--
+<div class="body-container grid-container">
+    <div class="header grid-container">
+        <div class="title"></div>
+        <div class="main-menu-icon grid-item"></div>
+    </div>
+
+    <div class="side-menu-tabs grid-container"></div>
+
+    <div class="Side-Menu grid-container"></div>
+
+    <div class="main-body grid-item"></div>
+
+    <div class="footer grid-container">
+        <div class="social-media-icons grid-container">
+            <div class="dev-to-icon social-media-icon grid-item"><img src="../Assets/Brand-Icons/dev.svg"
+                    alt="Dev.to" onclick="window.open('https://dev.to/code-nit-whit', '_blank');"></div>
+            <div class="codepen-icon social-media-icon grid-item"><img src="../Assets/Brand-Icons/codepen.svg"
+                    alt="CodePen" onclick="window.open('https://codepen.io/collection/WvPoOR', '_blank');"></div>
+            <div class="github-icon social-media-icon grid-item"><img src="../Assets/Brand-Icons/github.svg"
+                    alt="GitHub" onclick="window.open('https://github.com/Code-nit-Whit/', '_blank');"></div>
+        </div>
+        <div class="copyright grid-item">
+            <p>Copyright &copy; 2024 Code-Nit-Whit</p>
+        </div>
+    </div>
+</div>-->
+
+
+<div class="area">
+    <ul class="circles">
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+    </ul>
+</div>
